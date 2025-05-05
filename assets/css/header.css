@@ -1,0 +1,55 @@
+header {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px 2px #0000003c;
+}
+
+.header-logo {
+    width: 30px;
+}
+
+.header-direita {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-menu ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.separador {
+    width: 1px;
+    height: 24px;
+    background-color: var(--cinza-es);
+}
+
+.autenticacao {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.entrar-btn {
+    color: var(--cinza-cl);
+}
+
+.cadastrar-btn {
+    background-color: var(--cinza-cl);
+    color: var(--branco);
+    padding: .5rem;
+    border-radius: 8px;
+}
+
+.botao-tema {
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

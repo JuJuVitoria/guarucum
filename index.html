@@ -8,7 +8,38 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/variaveis.css">
     <link rel="stylesheet" href="./assets/css/tipografia.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
 </head>
 <body>
+    <header>
+        <!-- Logo -->
+        <img src="./assets/icons/logo_guarucum_olho.svg" class="header-logo" alt="Logo Olho Guarucum">
+        
+        <!-- Conteúdo à direita: nav + separador + botões -->
+        <div class="header-direita">
+            <!-- Navegação -->
+            <nav class="nav-menu">
+                <ul> 
+                    <li><a href="#" class="paragrafo">Início</a></li>
+                    <li><a href="#" class="paragrafo">Sobre nós</a></li>
+                    <li><a href="#" class="paragrafo">Contato</a></li>  
+                </ul>
+            </nav>
+            
+            <!-- Separador visual -->
+            <div class="separador"></div>
+ 
+            <!-- Área autenticação -->
+            <div class="autenticacao">
+                <a href="/login" class="entrar-btn paragrafo">Entrar</a>
+                <a href="/cadastro" class="cadastrar-btn paragrafo">Cadastrar</a>
+            </div>
+
+            <!-- Botão de alternar tema -->
+            <button class="botao-tema">
+                <img src="./assets/icons/icon_lua.svg" alt="Ícone meia lua - tema escuro">
+            </button>
+        </div>
+    </header>
 </body>
 </html>
