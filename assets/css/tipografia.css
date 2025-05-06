@@ -10,6 +10,7 @@
     font-size: var(--fs-heading-lg-xl);
     text-align: center;
     margin: 0 0 .8rem 0;
+    text-transform: uppercase;
 }
 
 .subtitulo-primario {
@@ -19,6 +20,24 @@
     font-size: var(--fs-heading-lg-lg);
     text-align: center;
     margin: 0 0 .8rem 0;
+    text-transform: uppercase;
+}
+
+.subtitulo-secundario {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-heading-lg-md);
+    text-align: center;
+    margin: 0 0 .5rem 0;
+    text-transform: capitalize;
+}
+
+.titulo-complementar {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-heading-lg-sm);
+    text-align: center;
+    margin: 0 0 .5rem 0;
 }
 
 .paragrafo {
