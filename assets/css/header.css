@@ -4,9 +4,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    margin: 1rem 2rem;
     border-radius: 10px;
     box-shadow: 0 10px 15px 2px #0000003c;
+
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    height: 60px;
+    z-index: 10;
 }
 
 .header-logo {

@@ -4,9 +4,21 @@
 
 /* Estilos */
 .titulo-principal {
+    /* Título principal */
     font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
+    font-weight: var(--fw-bold);
     font-size: var(--fs-heading-lg-xl);
+    text-align: center;
+    margin: 0 0 .8rem 0;
+}
+
+.subtitulo-primario {
+    /* Subtítulo - primário */
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-heading-lg-lg);
+    text-align: center;
+    margin: 0 0 .8rem 0;
 }
 
 .paragrafo {
@@ -15,4 +27,5 @@
     font-weight: 400;
     font-size: 1rem;
     color: var(--cinza-es);
+    margin: .3rem 0;
 }
