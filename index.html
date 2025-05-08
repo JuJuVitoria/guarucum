@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/css/header.css">  <!-- css do header -->
     <link rel="stylesheet" href="./assets/css/cads.css">  <!-- css dos cards -->
     <link rel="stylesheet" href="./assets/css/componentes.css">  <!-- css dos componentes gerais (list, video, section) -->
+    <link rel="stylesheet" href="./assets/css/carossel.css">
 </head>
 <body>
     <header>
@@ -114,5 +115,41 @@
         <p class="paragrafo">Nosso objetivo é simples, mas profundamente transformador: fazer com que a tecnologia seja uma aliada das práticas tradicionais, e não um obstáculo. O Guarucum quer ser um instrumento de empoderamento, contribuindo para que essas comunidades tenham controle total sobre seus processos produtivos — desde o planejamento até a venda —, sem que isso represente uma ruptura com suas culturas, valores ou formas de viver.</p>
         <p class="paragrafo">Ao invés de impor um modelo de gestão, o Guarucum se molda às necessidades dos povos. É uma ponte entre o conhecimento ancestral e as ferramentas do presente, sempre com respeito, escuta e responsabilidade social.</p>
     </section>
+    <div class="carrossel">
+        
+        <div class="carrossel-container container">
+            <h2 class="subtitulo-primario">Galeria</h2>
+            <div class="slide fade">
+                <img src="./assets/img/carrossel-inicio/slide-01.jpg" alt="">
+                <div class="text paragrafo">Image by <a href="https://pixabay.com/users/haiadur-11609842/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4644907">Hannai hai</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4644907">Pixabay</a></div>
+            </div>
+            <div class="slide fade">
+                <img src="./assets/img/carrossel-inicio/slide-02.jpg" alt="">
+                <div class="text paragrafo">Image by <a href="https://pixabay.com/users/haiadur-11609842/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4644907">Hannai hai</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4644907">Pixabay</a></div>
+            </div>
+            <div class="slide fade">
+                <img src="./assets/img/carrossel-inicio/slide-03.jpg" alt="">
+                <div class="text paragrafo">Image by <a href="https://pixabay.com/users/haiadur-11609842/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4644907">Tom Fisk</a> from <a href="https://www.pexels.com/pt-br/">Pixabay</a></div>
+            </div>
+            <div class="slide fade">
+                <img src="./assets/img/carrossel-inicio/slide-04.jpg" alt="">
+                <div class="text paragrafo">Image by <a href="https://www.pexels.com/pt-br/foto/floresta-tropical-cercada-por-nevoeiro-975771/">David Riaño Cortés</a> from <a href="https://www.pexels.com/pt-br/">Pixabay</a></div>
+            </div>
+        </div>
+
+        <!-- Controles do carrosel - botões próximo e anterior e indicadores dos slides -->
+        <div class="carrossel-controles container">
+            <a id="btnAnterior" class="anterior">&#10094;</a>
+            <div class="indicadores">
+                <span class="indicador" data-slide="1"></span>
+                <span class="indicador" data-slide="2"></span>
+                <span class="indicador" data-slide="3"></span>
+                <span class="indicador" data-slide="4"></span>
+            </div>
+            <a id="btnProximo" class="proximo">&#10095;</a>
+        </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>
