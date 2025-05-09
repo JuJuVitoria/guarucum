@@ -36,6 +36,10 @@ a {
     align-items: center;
 }
 
+.margin-inicial {
+    margin-top: 7rem;
+}
+
 /* Botão */
 .botao {
     background-color: var(--verde-es);
