@@ -1,5 +1,5 @@
 .carrossel {
-    padding: 2rem;
+    padding: 2rem 0 .5rem 0;
     background-color: var(--vermelho);
     color: var(--branco);
 }
@@ -18,12 +18,6 @@
     border-radius: 10px;
     width: 100%;
     height: 100%;
-}
-
-.carrossel-controles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .text {

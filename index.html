@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/css/cads.css">  <!-- css dos cards -->
     <link rel="stylesheet" href="./assets/css/componentes.css">  <!-- css dos componentes gerais (list, video, section) -->
     <link rel="stylesheet" href="./assets/css/carossel.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
 </head>
 <body>
     <header>
@@ -19,10 +20,10 @@
         <img src="./assets/icons/logo_guarucum_olho.svg" class="header-logo" alt="Logo Olho Guarucum">
         
         <!-- Conteúdo à direita: nav + separador + botões -->
-        <div class="header-direita">
+        <div class="header-direita flex-center">
             <!-- Navegação -->
             <nav class="nav-menu">
-                <ul> 
+                <ul class="flex-center"> 
                     <li><a href="#" class="paragrafo">Início</a></li>
                     <li><a href="#" class="paragrafo">Sobre nós</a></li>
                     <li><a href="#" class="paragrafo">Contato</a></li>  
@@ -33,13 +34,13 @@
             <div class="separador"></div>
  
             <!-- Área autenticação -->
-            <div class="autenticacao">
+            <div class="autenticacao flex-center">
                 <a href="/login" class="entrar-btn paragrafo">Entrar</a>
                 <a href="/cadastro" class="cadastrar-btn paragrafo">Cadastrar</a>
             </div>
 
             <!-- Botão de alternar tema -->
-            <button class="botao-tema">
+            <button class="botao-tema flex-center">
                 <img src="./assets/icons/icon_lua.svg" alt="Ícone meia lua - tema escuro">
             </button>
         </div>
@@ -60,10 +61,10 @@
         <p class="paragrafo">Essas populações mantêm modos de vida profundamente conectados à natureza e à terra, cultivando saberes ancestrais que envolvem o uso sustentável dos recursos naturais. No entanto, mesmo desempenhando um papel fundamental na preservação da biodiversidade e na produção de alimentos tradicionais, essas comunidades enfrentam inúmeros desafios — como a informalidade na comercialização de seus produtos, a exploração por atravessadores e a falta de acesso a tecnologias que possam auxiliar na gestão de seus empreendimentos.</p>
         
         <!-- Div dos cards -->
-        <div class="cards">
-            <div class="card"><img src="./assets/img/card-foto-01.jpg" alt=""></div>
-            <div class="card"><img src="./assets/img/card-foto-02.jpg" alt=""></div>
-            <div class="card"><img src="./assets/img/card-foto-03.jpg" alt=""></div>
+        <div class="cards flex-center">
+            <div class="card"><img src="./assets/img/cads-inicio/card-foto-01.jpg" alt=""></div>
+            <div class="card"><img src="./assets/img/cads-inicio/card-foto-02.jpg" alt=""></div>
+            <div class="card"><img src="./assets/img/cads-inicio/card-foto-03.jpg" alt=""></div>
         </div>
 
         <p class="paragrafo">Foi a partir dessa realidade que nasceu o Guarucum, um software de gestão pensado com e para essas comunidades. O sistema é projetado para ser acessível, funcional e adaptável à rotina de povos indígenas e tradicionais, contribuindo para a autonomia no controle de estoques, finanças, planejamento de produção e precificação de produtos. Tudo isso sem apagar as tradições ou impor práticas externas, mas sim respeitando os modos de organização e a cultura de cada povo.</p>
@@ -116,7 +117,6 @@
         <p class="paragrafo">Ao invés de impor um modelo de gestão, o Guarucum se molda às necessidades dos povos. É uma ponte entre o conhecimento ancestral e as ferramentas do presente, sempre com respeito, escuta e responsabilidade social.</p>
     </section>
     <div class="carrossel">
-        
         <div class="carrossel-container container">
             <h2 class="subtitulo-primario">Galeria</h2>
             <div class="slide fade">
@@ -138,7 +138,7 @@
         </div>
 
         <!-- Controles do carrosel - botões próximo e anterior e indicadores dos slides -->
-        <div class="carrossel-controles container">
+        <div class="container flex-center">
             <a id="btnAnterior" class="anterior">&#10094;</a>
             <div class="indicadores">
                 <span class="indicador" data-slide="1"></span>
@@ -149,6 +149,42 @@
             <a id="btnProximo" class="proximo">&#10095;</a>
         </div>
     </div>
+    <section class="container">
+        <h2 class="subtitulo-primario">Quer saber mais sobre os PFNMs?</h2>
+        <p class="paragrafo">Os Produtos Florestais Não Madeireiros (PFNMs) são riquezas da biodiversidade brasileira que geram sustento e fortalecem a cultura de muitas comunidades tradicionais, sem causar danos à floresta.</p>
+        <p class="paragrafo">Se você quer entender melhor o que são, como são utilizados e por que são tão importantes para os povos indígenas e para a sustentabilidade, clique no botão abaixo e descubra um universo de saberes, práticas e possibilidades.</p>
+        
+        <h4 class="titulo-complementar">Para saber mais:</h4>
+        <div class="flex-center">
+            <a href="#" class="botao paragrafo">Clique aqui</a>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-flex">
+            <div class="logo-e-slogan">
+                <div class="footer-logo">
+                    <img src="./assets/icons/titulo_guarucum_dark.svg" class="footer-logo-titulo" alt="Logo título Guarucum">
+                    <img src="./assets/icons/logo_guarucum_olho.svg" class="footer-logo-olho" alt="Guarucum logo - olho">
+                </div>
+                <p class="footer-slogan">Preservar é resistir</p>
+            </div>
+            <nav class="footer-nav">
+                <ul> 
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Contato</a></li>  
+                </ul>
+            </nav>
+        </div>
+        <div class="separador-horizontal"></div>
+        <div class="footer-contato">
+            <div>
+                <a href=""><img src="./assets/icons/redes sociais/instagram.svg" alt="Ícone instagram"></a>
+                <a href=""><img src="./assets/icons/redes sociais/youtube.svg" alt="Ícone youtube"></a>
+            </div>
+            <p>guarucum@gmail.com</p>
+        </div>
+    </footer>
 
     <script type="module" src="./assets/js/main.js"></script>
 </body>

@@ -29,3 +29,19 @@ a {
     padding: 0 20px;
     box-sizing: border-box;
 }
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botão */
+.botao {
+    background-color: var(--verde-es);
+    color: var(--branco);
+    padding: .5rem 1rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+}

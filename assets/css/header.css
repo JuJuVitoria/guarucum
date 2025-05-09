@@ -20,13 +20,10 @@ header {
 }
 
 .header-direita {
-    display: flex;
-    align-items: center;
     gap: 1rem;
 }
 
 .nav-menu ul{
-    display: flex;
     gap: 1rem;
 }
 
@@ -37,8 +34,6 @@ header {
 }
 
 .autenticacao {
-    display: flex;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -56,6 +51,4 @@ header {
 .botao-tema {
     background: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
 }

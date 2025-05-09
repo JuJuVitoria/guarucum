@@ -1,0 +1,60 @@
+footer {
+    padding: 1rem 4rem;
+    box-shadow: 0 2px 10px 2px #0000003c;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-e-slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer-logo {
+    display: flex;
+    gap: .5rem;
+    text-align: center;    
+}
+
+.footer-logo-titulo {
+    width: 200px;
+}
+
+.footer-logo-olho {
+    width: 35px;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.footer-contato {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-contato img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-slogan, .footer-nav ul a, .footer-contato p{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-heading-lg-sm);
+}
+
+.separador-horizontal {
+    width: 100%;
+    height: 1px;
+    background-color: var(--cinza-es);
+    margin: 1rem 0;
+}

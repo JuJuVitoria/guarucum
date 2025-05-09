@@ -1,6 +1,4 @@
 .cards {
-    display: flex;
-    flex-direction: row;
     gap: 1rem;
     margin: 2.5rem 0;
 }
