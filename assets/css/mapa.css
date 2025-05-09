@@ -1,0 +1,33 @@
+.mapa img {
+    width: 80%;
+}
+
+.mapa-creditos {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: .8rem;
+    text-align: right;
+}
+
+.mapa-legenda {
+    margin: 1rem 0;
+}
+
+.legenda-titulo {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-heading-lg-sm);
+}
+
+.legenda-linha {
+    margin: .5rem 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.descricao-cor {
+    background-color: #979797;
+    width: 30px;
+    height: 30px;
+}

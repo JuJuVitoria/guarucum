@@ -1,0 +1,26 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+thead th {
+    background-color: var(--cinza-cl);
+    color: var(--cinza-es);
+    padding: 10px;
+    text-align: left;
+}
+
+tbody td {
+    color: var(--cinza-es);
+    padding: 10px;
+    border: 1px solid #505050;
+}
+
+tbody tr:nth-child(even) {  
+    background-color: var(--cinza-cl);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--branco)
+}

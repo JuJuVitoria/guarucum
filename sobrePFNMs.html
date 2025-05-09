@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./assets/css/variaveis.css">  <!-- css das variáveis -->
     <link rel="stylesheet" href="./assets/css/tipografia.css">  <!-- css das tipografias -->
     <link rel="stylesheet" href="./assets/css/header.css">  <!-- css do header -->
+    <link rel="stylesheet" href="./assets/css/tabela.css">
+    <link rel="stylesheet" href="./assets/css/mapa.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
 </head>
 <body>
@@ -21,7 +23,7 @@
             <!-- Navegação -->
             <nav class="nav-menu">
                 <ul class="flex-center"> 
-                    <li><a href="#" class="paragrafo">Início</a></li>
+                    <li><a href="index.html" class="paragrafo">Início</a></li>
                     <li><a href="#" class="paragrafo">Sobre nós</a></li>
                     <li><a href="#" class="paragrafo">Contato</a></li>  
                 </ul>
@@ -47,8 +49,79 @@
         <p class="paragrafo">Os Produtos Florestais Não Madeireiros (PFNMs) são recursos extraídos de florestas e outros ecossistemas sem a necessidade do corte de árvores. Eles incluem frutas, sementes, óleos, resinas, plantas medicinais, fibras naturais, mel, entre outros. Exemplos conhecidos são o açaí, castanha-do-pará, pequi, copaíba, andiroba e licuri.</p>
         <p class="paragrafo">Esses produtos fazem parte do dia a dia de milhares de famílias indígenas, quilombolas e extrativistas que vivem em diferentes biomas do Brasil — da Amazônia à Caatinga, do Cerrado ao Pantanal. Eles não só garantem a subsistência dessas comunidades como também representam uma rica herança de práticas sustentáveis e respeito à natureza.</p>
         <p class="paragrafo">Apesar do valor ecológico, econômico e cultural dos PFNMs, a maior parte da sua cadeia produtiva ainda é informal. Muitas comunidades dependem de atravessadores para comercializar seus produtos, o que muitas vezes resulta em exploração, desvalorização e perda de autonomia.</p>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th class="titulo-complementar">PFNM</th>
+                    <th class="titulo-complementar">Bioma | Região</th>
+                    <th class="titulo-complementar">Principais Estados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="paragrafo">Açai</td>
+                    <td class="paragrafo">Amazônia</td>
+                    <td class="paragrafo">PA, AM e AP</td>
+                </tr>
+                <tr>
+                    <td class="paragrafo">Castanhas-do-Brasil</td>
+                    <td class="paragrafo">Amazônia</td>
+                    <td class="paragrafo">AC, AM e PA</td>
+                </tr>
+                <tr>
+                    <td class="paragrafo">Pequi</td>
+                    <td class="paragrafo">Cerrado</td>
+                    <td class="paragrafo">GO, MG e TO</td>
+                </tr>
+                <tr>
+                    <td class="paragrafo">Umbu</td>
+                    <td class="paragrafo">Caatinga</td>
+                    <td class="paragrafo">BA, PE e SE</td>
+                </tr>
+                <tr>
+                    <td class="paragrafo">Palmito Juçara</td>
+                    <td class="paragrafo">Mata Atlântica</td>
+                    <td class="paragrafo">SP, PR e SC</td>
+                </tr>
+                <tr>
+                    <td class="paragrafo">Babaçu</td>
+                    <td class="paragrafo">Mata dos Cocais (MA/TO)</td>
+                    <td class="paragrafo">MA, PI e TO</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
-
+    <section class="container mapa">
+        <img src="./assets/img/Mapa.png" alt="Mapa do Brasil">
+        <p class="mapa-creditos">Mapa do Brasil distribuído por biomas e seus respectivos estados</p>
+        <p class="mapa-creditos">@novaescola.org.br</p>
+        <div class="mapa-legenda">
+            <h3 class="legenda-titulo">Legenda</h3>
+            <div class="legenda-descricao">
+                <div class="legenda-linha">
+                    <div class="descricao-cor"></div>
+                    <p class="paragrafo">Amazônia</p>
+                </div>
+                <div class="legenda-linha">
+                    <div class="descricao-cor"></div>
+                    <p class="paragrafo">Cerrado</p>
+                </div>
+                <div class="legenda-linha">
+                    <div class="descricao-cor"></div>
+                    <p class="paragrafo">Mata Atlântica</p>
+                </div> 
+                <div class="legenda-linha">
+                    <div class="descricao-cor"></div>
+                    <p class="paragrafo">Pampa</p>
+                </div> 
+                <div class="legenda-linha">
+                    <div class="descricao-cor"></div>
+                    <p class="paragrafo">Pantanal</p>
+                </div> 
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-flex">
             <div class="logo-e-slogan">
