@@ -1,5 +1,6 @@
 .mapa img {
     width: 80%;
+    margin: 0 auto;
 }
 
 .mapa-creditos {
@@ -27,7 +28,30 @@
 }
 
 .descricao-cor {
-    background-color: #979797;
     width: 30px;
     height: 30px;
+}
+
+.legenda-descricao .legenda-linha:nth-child(1) .descricao-cor {
+  background-color: #14A36A;
+}
+
+.legenda-descricao .legenda-linha:nth-child(2) .descricao-cor {
+  background-color: #EEEB4A;
+}
+
+.legenda-descricao .legenda-linha:nth-child(3) .descricao-cor {
+  background-color: #1F9B9E;
+}
+
+.legenda-descricao .legenda-linha:nth-child(4) .descricao-cor {
+  background-color: #BC2035;
+}
+
+.legenda-descricao .legenda-linha:nth-child(5) .descricao-cor {
+  background-color: #794198;
+} 
+
+.legenda-descricao .legenda-linha:nth-child(6) .descricao-cor {
+  background-color: #6F442D;
 }
