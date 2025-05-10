@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/tipografia.css">  <!-- css das tipografias -->
     <link rel="stylesheet" href="./assets/css/header.css">  <!-- css do header -->
     <link rel="stylesheet" href="./assets/css/cads.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
 </head>
 <body>
@@ -80,6 +81,19 @@
         <p class="paragrafo">Este é só o começo da nossa jornada. Durante todo o ano de 2025, o projeto será desenvolvido, testado e aprimorado com dedicação e responsabilidade. Em breve, teremos protótipos, atualizações e novidades para compartilhar com você, mostrando na prática como tecnologia e respeito às tradições podem caminhar lado a lado.</p>
 
         <h4 class="titulo-complementar">Junte-se a nós nessa caminhada por uma tecnologia mais consciente, um futuro mais sustentável e uma sociedade mais justa. </h4>
+    </section>
+    <section class="container">
+    <form class="form-contato" name="contato-por-email" action="" target="_blank" method="post" autocomplete="on" accept-charset="UTF-8">
+        <h4 class="paragrafo">Contato por email:</h4>
+        <div class="separador-horizontal"></div>
+        <label class="paragrafo" for="f-nome">Nome completo:</label><br>
+        <input class="paragrafo" type="text" id="f-nome" name="f-nome" placeholder="Digite seu nome completo" required><br>
+        <label class="paragrafo" for="f-email">Email:</label><br>
+        <input class="paragrafo" type="text" id="f-email" name="f-email" placeholder="Digite seu email" required><br>
+        <label class="paragrafo" for="f-mensagem">Mensagem:</label><br>
+        <textarea class="paragrafo" name="f-mensagem" id="f-mensagem" placeholder="Digite sua mensagem" rows="10" cols="30" required></textarea><br>
+        <input class="paragrafo" type="submit" value="Enviar">
+    </form>
     </section>
 
     <footer>
