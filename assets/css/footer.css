@@ -56,3 +56,19 @@ footer {
     background-color: var(--cinza-es);
     margin: 1rem 0;
 }
+
+@media screen and (max-width: 600px) {
+    footer {
+        padding: 1rem 1rem;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .footer-contato {
+        flex-direction: column;
+    }
+}

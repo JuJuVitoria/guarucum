@@ -1,6 +1,7 @@
 .hero-section {
     position: relative;
-    height: 100vh;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
 }
   
@@ -45,4 +46,22 @@
 .lista {
     list-style-type: circle;
     padding:.5rem 0 1rem 2rem
+}
+
+@media screen and (max-width: 900px) {
+    .hero-section {
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-section {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero-section {
+        height: 70vh;
+    }
 }
