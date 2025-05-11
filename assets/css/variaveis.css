@@ -1,5 +1,5 @@
 :root {
-    /* Cores */
+    /* ==== CORES ==== */
     --branco: #fefefe;
     --cinza-cl: #dfdfe2;
     --cinza-md: #272727;
@@ -9,7 +9,7 @@
     --verde-md: #7cb683;
     --verde-es: #325935;
 
-    /* Tipografia */
+    /* ==== TIPOGRAFIA ==== */
     /* Font size | Títulos - Desktop */
     --fs-heading-lg-xl: 2.375rem;
     --fs-heading-lg-lg: 2.25rem;
@@ -21,10 +21,14 @@
     --fs-text-md: 0.875rem;
     --fs-text-sm: 0.75rem;
 
-    /* Peso */
+    /* ==== PESO ==== */
     --fw-extra-light: 200;
     --fw-light: 300;
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-bold: 700;
+
+    /* ==== POSIÇÃO ==== */
+    --z-fixo: 100;
+    --z-ferramentas: 10;
 }

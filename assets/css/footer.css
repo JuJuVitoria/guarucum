@@ -16,9 +16,8 @@ footer {
 }
 
 .footer-logo {
-    display: flex;
+    display: inline-flex;
     gap: .5rem;
-    text-align: center;    
 }
 
 .footer-logo-titulo {
@@ -30,8 +29,7 @@ footer {
 }
 
 .footer-nav ul {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     gap: 1rem;
 }
 

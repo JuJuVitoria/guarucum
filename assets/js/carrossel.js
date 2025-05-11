@@ -26,11 +26,11 @@ function mostraSlide(n) {
         slides[i].style.display = "none";
     }
     for (let i = 0; i < indicadores.length; i++) {
-        indicadores[i].className = indicadores[i].className.replace(" ativo", "");
+        indicadores[i].className = indicadores[i].className.replace(" indicador__ativo", "");
     }
 
     slides[slideIndex - 1].style.display = "block";
-    indicadores[slideIndex - 1].className += " ativo";
+    indicadores[slideIndex - 1].className += " indicador__ativo";
 }
 
 // Vincula os cliques nos indicadores

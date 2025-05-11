@@ -15,32 +15,49 @@
 <body>
     <header>
         <!-- Logo -->
-        <img src="./assets/icons/logo_guarucum_olho.svg" class="header-logo" alt="Logo Olho Guarucum">
-        
-        <!-- Conteúdo à direita: nav + separador + botões -->
-        <div class="header-direita flex-center">
-            <!-- Navegação -->
-            <nav class="nav-menu">
-                <ul class="flex-center"> 
-                    <li><a href="index.html" class="paragrafo">Início</a></li>
-                    <li><a href="sobreNos.html" class="paragrafo">Sobre nós</a></li>
-                    <li><a href="contato.html" class="paragrafo">Contato</a></li>  
-                </ul>
-            </nav>
-            
-            <!-- Separador visual -->
-            <div class="separador"></div>
- 
-            <!-- Área autenticação -->
-            <div class="autenticacao flex-center">
-                <a href="/login" class="entrar-btn paragrafo">Entrar</a>
-                <a href="/cadastro" class="cadastrar-btn paragrafo">Cadastrar</a>
+        <img src="./assets/icons/logo_guarucum_olho.svg" class="logo-cabecalho" alt="Logo Olho Guarucum">
+
+        <!-- Conteúdo à direita -->
+        <div class="cabecalho-direita flex-center">
+            <nav class="navegacao">
+
+            <!-- Botões de menu mobile -->
+            <div class="controle-menu-mobile" id="controle-menu-mobile">
+                <a href="#" class="btn-abrir-menu" id="abrirMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px" viewBox="0 -960 960 960">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+                </a>
+                <a href="#" class="btn-fechar-menu" id="fecharMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px" viewBox="0 -960 960 960">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+                </a>
             </div>
 
-            <!-- Botão de alternar tema -->
-            <button class="botao-tema flex-center">
-                <img src="./assets/icons/icon_lua.svg" alt="Ícone meia lua - tema escuro">
-            </button>
+            <!-- Menu de navegação -->
+            <div class="menu-navegacao" id="menuNavegacao">
+                <ul class="lista-navegacao flex-center">
+                <li><a href="index.html" class="link-navegacao paragrafo">Início</a></li>
+                <li><a href="sobreNos.html" class="link-navegacao paragrafo">Sobre nós</a></li>
+                <li><a href="contato.html" class="link-navegacao paragrafo">Contato</a></li>
+                </ul>
+
+                <div class="linha-divisoria"></div>
+
+                <!-- Autenticação + tema -->
+                <div class="botoes-finais">
+                <div class="area-autenticacao flex-center">
+                    <a href="/login" class="botao-entrar paragrafo">Entrar</a>
+                    <a href="/cadastro" class="botao-cadastrar paragrafo">Cadastrar</a>
+                </div>
+
+                <button class="botao-tema flex-center">
+                    <img src="./assets/icons/icon_lua.svg" alt="Ícone meia lua - tema escuro">
+                </button>
+                </div>
+            </div>
+            </nav>
         </div>
     </header>
 
