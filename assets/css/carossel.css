@@ -109,6 +109,9 @@
     align-items: center;
     gap: 1rem
 }
+.integrante-redes-sociais a svg path {
+    fill: var(--branco);
+}
 
 .rede-social-icone {
     width: 40px;
