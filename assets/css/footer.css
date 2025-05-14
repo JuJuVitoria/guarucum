@@ -22,6 +22,11 @@ footer {
 
 .footer-logo-titulo {
     width: 200px;
+    height: min-content;
+}
+
+.footer-logo-titulo path {
+    fill: var(--cor-texto);
 }
 
 .footer-logo-olho {
@@ -39,22 +44,19 @@ footer {
     justify-content: space-between;
 }
 
-.footer-contato img {
+.footer-contato svg {
     width: 30px;
     height: 30px;
+}
+
+.footer-contato svg path {
+    fill: var(--cor-texto);
 }
 
 .footer-slogan, .footer-nav ul a, .footer-contato p{
     font-family: "Ubuntu", sans-serif;
     font-weight: var(--fw-regular);
     font-size: var(--fs-heading-lg-sm);
-}
-
-.separador-horizontal {
-    width: 100%;
-    height: 1px;
-    background-color: var(--cinza-es);
-    margin: 1rem 0;
 }
 
 @media screen and (max-width: 600px) {

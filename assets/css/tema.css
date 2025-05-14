@@ -1,0 +1,19 @@
+html[data-theme="claro"] {
+  color-scheme: light;
+}
+
+html[data-theme="escuro"] {
+  color-scheme: dark;
+}
+
+/* Variáveis de tema */
+:root {
+  --cor-fundo: #fefefe;
+  --cor-texto: #1f1f1f;
+}
+
+html[data-theme="escuro"] {
+  --cor-fundo: #1f1f1f;
+  --cor-texto: #fefefe;
+}
+

@@ -1,5 +1,5 @@
 header {
-  background-color: var(--branco);
+  background-color: var(--cor-fundo);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,11 +53,12 @@ header {
 
 .btn-abrir-menu svg path,
 .btn-fechar-menu svg path {
-  fill: var(--cinza-es);
+  fill: var(--cor-texto);
 }
 
 .menu-navegacao {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
@@ -70,7 +71,12 @@ header {
 .linha-divisoria {
   width: 1px;
   height: 24px;
-  background-color: var(--cinza-es);
+  background-color: var(--cor-texto);
+}
+
+.botoes-finais {
+  width: auto;
+
 }
 
 .area-autenticacao {
@@ -119,7 +125,7 @@ header {
   }
 
   .menu-navegacao {
-    background-color: var(--branco);
+    background-color: var(--cor-fundo);
     position: absolute;
     flex-direction: column;
     justify-content: flex-start;
@@ -146,7 +152,7 @@ header {
   }
 
   .lista-navegacao li {
-    background-color: var(--branco);
+    background-color: var(--cor-fundo);
     box-shadow: 0 5px 10px 0 #0000003c;
     width: 100%;
     padding: 1rem;
@@ -174,4 +180,30 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.controle-tema {
+  margin: 1rem auto;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-modo-light path,
+.btn-modo-dark path {
+  fill: var(--cor-texto);
+}
+
+.btn-modo-light,
+.btn-modo-dark {
+  position: absolute;
+  inset: auto; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }

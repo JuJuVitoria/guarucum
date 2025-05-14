@@ -1,5 +1,17 @@
 let slideIndex = 1;
-mostraSlide(slideIndex);
+
+// Só executa se houver slides na página
+if (document.getElementsByClassName("slide").length > 0) {
+    mostraSlide(slideIndex);
+
+    // Vincula os cliques nos indicadores
+    const indicadores = document.querySelectorAll(".indicador");
+    indicadores.forEach((indicador, index) => {
+        indicador.addEventListener("click", () => {
+            slideAtual(index + 1);
+        });
+    });
+}
 
 export function proximoSlide(n) {
     mostraSlide(slideIndex += n);
@@ -13,12 +25,12 @@ function mostraSlide(n) {
     const slides = document.getElementsByClassName("slide");
     const indicadores = document.getElementsByClassName("indicador");
 
+    if (slides.length === 0) return; // Garante que só executa se houver slides
+
     if (n > slides.length) {
-    // Se n (o index do slide) for maior que a quantidade de slides slideIndex recebe 1, ou seja, retorna para o primeiro slide
         slideIndex = 1;
     }
     if (n < 1) {
-    // Se n (o index do slide) for menor que 1 slideIndex recebe a quantidades total de slides, ou seja, retorna para o último slide
         slideIndex = slides.length;
     }
 
@@ -32,11 +44,3 @@ function mostraSlide(n) {
     slides[slideIndex - 1].style.display = "block";
     indicadores[slideIndex - 1].className += " indicador__ativo";
 }
-
-// Vincula os cliques nos indicadores
-const indicadores = document.querySelectorAll(".indicador");
-indicadores.forEach((indicador, index) => {
-    indicador.addEventListener("click", () => {
-        slideAtual(index + 1);
-    });
-});
