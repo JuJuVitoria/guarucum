@@ -109,6 +109,12 @@
     align-items: center;
     gap: 1rem
 }
+
+.integrante-redes-sociais a svg {
+    width: 40px;
+    height: 40px;
+}
+
 .integrante-redes-sociais a svg path {
     fill: var(--branco);
 }
