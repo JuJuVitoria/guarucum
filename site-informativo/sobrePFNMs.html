@@ -4,30 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre os PFNMs</title>
-    <link rel="shortcut icon" href="./assets/icons/logo_guarucum_olho.svg">
+    <link rel="shortcut icon" href="../publico/logo/logo_guarucum_olho.svg">
     <link rel="stylesheet" href="./assets/css/style.css">  <!-- css das regras gerais e do reset -->
     <link rel="stylesheet" href="./assets/css/variaveis.css">  <!-- css das variáveis -->
     <link rel="stylesheet" href="./assets/css/tipografia.css">  <!-- css das tipografias -->
     <link rel="stylesheet" href="./assets/css/tema.css"> <!-- css para alteração do tema DARK ou LIGHT -->
     <link rel="stylesheet" href="./assets/css/header.css">  <!-- css do header -->
-<<<<<<< HEAD
     <link rel="stylesheet" href="./assets/css/tabela.css"> <!--css para a tabela -->
     <link rel="stylesheet" href="./assets/css/mapa.css"> <!-- css para o mapa -->
-    <link rel="stylesheet" href="./assets/css/carossel.css"> <!-- css para o carrossel de imagens -->
+    <link rel="stylesheet" href="./assets/css/carrossel.css"> <!-- css para o carrossel de imagens -->
     <link rel="stylesheet" href="./assets/css/componentes.css"> <!-- css dos componentes gerais -->
     <link rel="stylesheet" href="./assets/css/footer.css"> <!-- css para o footer -->
-=======
-    <link rel="stylesheet" href="./assets/css/tabela.css">
-    <link rel="stylesheet" href="./assets/css/mapa.css">
-    <link rel="stylesheet" href="./assets/css/carrossel.css">
-    <link rel="stylesheet" href="./assets/css/componentes.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
->>>>>>> 9220b11c895451a52be9ca9f38bbcc63a8428226
 </head>
 <body>
     <header>
         <!-- Logo -->
-        <img src="./assets/icons/logo_guarucum_olho.svg" class="logo-cabecalho" alt="Logo Olho Guarucum">
+        <img src="../publico/logo/logo_guarucum_olho.svg" class="logo-cabecalho" alt="Logo Olho Guarucum">
 
         <!-- Conteúdo à direita -->
         <div class="cabecalho-direita flex-center">
@@ -60,8 +52,9 @@
                 <!-- Autenticação + tema -->
                 <div class="botoes-finais">
                     <div class="area-autenticacao flex-center">
-                        <a href="/login" class="botao-entrar paragrafo">Entrar</a>
-                        <a href="/cadastro" class="botao-cadastrar paragrafo">Cadastrar</a>
+                        <!-- TEMPORÁRIO - Botão entrar está direcionando para o Dashboard -->
+                        <a href="../sistema-gestao/dashboard.html" class="botao-entrar paragrafo">Entrar</a>
+                        <a href="#" class="botao-cadastrar paragrafo">Cadastrar</a>
                     </div>
 
                     <div class="controle-tema flex-center">
@@ -175,27 +168,19 @@
         <p class="paragrafo">PFNMs como o açaí, a castanha-do-pará, o pequi e o licuri fazem parte da vida diária dessas comunidades, não apenas como fonte de alimento, mas também como base econômica e cultural. A coleta e o uso desses produtos respeitam os ciclos naturais e mantêm o equilíbrio ecológico dos territórios.</p>
         <p class="paragrafo">Essa forma de viver e produzir mostra que é possível gerar renda e preservar a natureza ao mesmo tempo — um exemplo valioso de sustentabilidade que o mundo moderno tem muito a aprender.</p>
     </section>
-<<<<<<< HEAD
     <!--Início Carrossel de imagens-->
-     <div class="container-slider">
-=======
     <div class="container-slider">
->>>>>>> 9220b11c895451a52be9ca9f38bbcc63a8428226
-        <div class="wrapper">
-            <div class="slider-holder">
-                <div id="slider-image-1"></div>
-                <div id="slider-image-2"></div>
-                <div id="slider-image-3"></div>
-                <div id="slider-image-4"></div>
-                <div id="slider-image-5"></div>
+        <div class="container-slider">
+            <div class="wrapper">
+                <div class="slider-holder">
+                    <div id="slider-image-1"></div>
+                    <div id="slider-image-2"></div>
+                    <div id="slider-image-3"></div>
+                    <div id="slider-image-4"></div>
+                    <div id="slider-image-5"></div>
+                </div>
             </div>
         </div>
-<<<<<<< HEAD
-     </div>
-      </div>
-      <!--Início footer-->
-        <footer>
-=======
         <div class="button-holder">
             <a href="#slider-image-1" class="dots"></a>
             <a href="#slider-image-2" class="dots"></a>
@@ -207,7 +192,6 @@
     
     <!-- Style - footer.css -->
     <footer>
->>>>>>> 9220b11c895451a52be9ca9f38bbcc63a8428226
         <div class="footer-flex">
             <!-- Logo "criada/modificada no css" -->
             <div class="logo-e-slogan">
@@ -224,7 +208,7 @@
                         <path d="M1026.29 7.66832L1076.62 7.396C1085.8 40.4211 1097.99 72.3816 1113.15 102.225C1125.79 76.8625 1139.58 44.1221 1149.45 7.396L1200 7.66832V192.302H1157.03V100.109C1138.88 141.316 1113.15 181.731 1113.15 181.731C1113.15 181.731 1087.42 141.316 1069.26 100.109V192.302H1026.3V7.66832H1026.29Z" fill="#FFF7E5"/>
                     </svg>
                     <!-- IMG da logo olho Guarucum -->
-                    <img src="./assets/icons/logo_guarucum_olho.svg" class="footer-logo-olho" alt="Guarucum logo - olho">
+                    <img src="../publico/logo/logo_guarucum_olho.svg" class="footer-logo-olho" alt="Guarucum logo - olho">
                 </div>
                 <!-- Slogan -->
                 <p class="footer-slogan">Preservar é resistir</p>
@@ -234,9 +218,9 @@
             <nav class="footer-nav">
                 <!-- Lista com os links das páginas -->
                 <ul> 
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="contato.html">Contato</a></li>  
-                    <li><a href="sobrePFNMs.html">Sobre PFNMs</a></li>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./contato.html">Contato</a></li>  
+                    <li><a href="./sobrePFNMs.html">Sobre PFNMs</a></li>
                 </ul>
             </nav>
         </div>

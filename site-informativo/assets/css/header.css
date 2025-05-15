@@ -84,7 +84,7 @@ header {
 }
 
 .botao-entrar {
-  color: var(--cinza-cl);
+  color: var(--cor-texto);
 }
 
 .botao-cadastrar {
