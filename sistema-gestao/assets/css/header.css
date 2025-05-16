@@ -1,0 +1,66 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 100vw;
+    background-color: var(--cor-fundo-1);
+    box-shadow: 1px 1px 4px var(--cinza-cl);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.ajuste-navegacao {
+    display: flex;
+    gap: 1rem;
+}
+
+.navegacao {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.lista-navegacao {
+    display: flex;
+    gap: 1rem;
+}
+
+.link-navegacao svg path {
+    fill: var(--cor-texto);
+}
+
+.img-logo-header {
+    width: 45px;
+    height: 45px;
+}
+
+
+/* botão tema */
+
+.controle-tema {
+  margin: auto;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-modo-light path,
+.btn-modo-dark path {
+  fill: var(--cor-texto);
+}
+
+.btn-modo-light,
+.btn-modo-dark {
+  position: absolute;
+  inset: auto; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}

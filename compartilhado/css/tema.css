@@ -10,10 +10,14 @@ html[data-theme="escuro"] {
 :root {
   --cor-fundo: #fefefe;
   --cor-texto: #1f1f1f;
+  --cor-fundo-1: #f3f3f3;
 }
 
 html[data-theme="escuro"] {
   --cor-fundo: #1f1f1f;
   --cor-texto: #fefefe;
+  --cor-fundo-1: #272727;
 }
+
+
 
