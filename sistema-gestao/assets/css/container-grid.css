@@ -1,0 +1,24 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    min-height: calc(100vh - 60px); /* 60px é a altura do header */
+}
+
+.menu-lateral {
+    grid-area: sidebar;
+    background-color: blueviolet;
+    height: 100%;
+}
+
+.conteudo-menu-lateral {
+    grid-area: main;
+    background-color: blanchedalmond;
+    height: 100%;
+}
