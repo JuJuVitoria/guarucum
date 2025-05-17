@@ -1,0 +1,21 @@
+main {
+    margin-top: 1rem; /* altura do header */
+    margin-left: 100px; /* largura do menu-lateral padrão */
+    height: calc(100vh - 60px);
+    background-color: var(--cor-fundo);
+    padding: 2rem;
+}
+
+@media (max-width: 900px) {
+    main {
+        margin-left: 40px; /* largura do menu-lateral no breakpoint */
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        margin-left: 30px; /* menu-lateral some */
+        padding: 1rem;
+    }
+}
