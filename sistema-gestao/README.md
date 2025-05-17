@@ -1,8 +1,12 @@
-Esta pasta contém os arquivos CSS específicos do sistema de gestão.
+# Software de gestão
+## Esta pasta contém os arquivos do Software de Gestão:
 
-## Arquivos
+### Organização das pastas:
 
-- `header.css`: Estilos do cabeçalho.
-- `container-grid.css`: Layout principal em grid, separando menu lateral e conteúdo central.
+#### assets
+- Contém a pasta de css, onde os arquivos css são modelarizados;
+- Contém a pasta img, que possui as imagens para o sistema;
+- Contém a pasta js, que possui os arquivos js modularizados.
 
-Cada arquivo é responsável por uma parte específica da interface, seguindo o padrão de CSS modularizado.
+#### pages
+- Contém os arquivos html do sistema.

@@ -5,9 +5,11 @@ Este é o repositório principal do sistema de gestão Guarucum.
 
 ## Estrutura do Projeto
 
-- `compartilhado/`: Recursos compartilhados (CSS, imagens, etc).
-- `sistema-gestao/`: Código fonte do sistema de gestão.
-- `publico/`: Arquivos públicos como imagens e logos.
+- `compartilhado/`: Recursos compartilhados (CSS, imagens, etc);
+- `sistema-gestao/`: Código fonte do sistema de gestão;
+- `publico/`: Arquivos públicos como imagens e logos;
+- `backend/`: Arquivos de backend;
+- `docs/`: Documentação do projeto.
 
 ## Como rodar
 
