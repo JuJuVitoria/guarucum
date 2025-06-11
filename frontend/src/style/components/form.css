@@ -1,16 +1,46 @@
-.form-contato {
-    width: 550px;
-    height: 100%;
+.module-form {
+    width: 100%;
+    height: auto;
     padding: 1rem;
-    margin: auto;
     box-shadow: 0 10px 15px 2px #0000003c;
     border-radius: 10px;
 }
 
-.form-contato input, textarea {
-    background-color: #F1F1F1;
+.module-form__titulo {
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+}
+
+.module-form__conjunto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.module-form__conjunto__titulo {
+    font-size: 1.1rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 1rem;
+}
+
+.module-form__label {
+    font-size: 1rem;
+    font-weight: var(--fw-medium);
+}
+
+.module-form__input {
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
+    background-color: #F1F1F1;
     padding: .5rem;
+    margin-bottom: 1rem;
     border-radius: 8px;
+}
+
+.module-form__input-textarea {
+    width: 100%;
+    resize: vertical;
 }
