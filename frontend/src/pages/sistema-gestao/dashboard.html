@@ -5,22 +5,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guarucum - Dashboard</title>
-  <link rel="shortcut icon" href="../../publico/logo/logo_guarucum_olho.svg" />
-  <link rel="stylesheet" href="../assets/css/styles.css" /> <!--  -->
-  <link rel="stylesheet" href="../../compartilhado/css/variaveis.css" /> <!-- CSS compartilhado - variáveis -->
-  <link rel="stylesheet" href="../../compartilhado/css/tema.css" /> <!-- CSS compartilhado - tema -->
-  <link rel="stylesheet" href="../../compartilhado/css/tipografia.css" /> <!-- CSS compartilhado - tipográfia -->
-  <link rel="stylesheet" href="../assets/css/header.css" /> <!--  -->
-  <link rel="stylesheet" href="../assets/css/menu-lateral.css" /> <!--  -->
-  <link rel="stylesheet" href="../assets/css/main-conteudo.css"> <!--  -->
-  <link rel="stylesheet" href="../assets/css/imagens.css">
-  <link rel="stylesheet" href="../assets/css/tabela.css">
+
+  <link rel="shortcut icon" href="/frontend/public/logo/logo_guarucum_olho.svg">
+  <!-- css das regras gerais e do reset -->
+  <link rel="stylesheet" href="/frontend/src/style/vendor/reset.css">
+  <!-- css das variáveis -->
+  <link rel="stylesheet" href="/frontend/src/style/base/variaveis.css">
+  <!-- css das tipografias -->
+  <link rel="stylesheet" href="/frontend/src/style/base/tipografia.css">
+  <!-- css principal -->
+  <link rel="stylesheet" href="/frontend/src/style/main.css">
+  <!-- css da sidebar -->
+  <link rel="stylesheet" href="/frontend/src/style/layout/sidebar.css">
+  <!-- css para alteração do tema DARK ou LIGHT -->
+  <link rel="stylesheet" href="/frontend/src/style/theme/tema.css">
+  <!-- css do header -->
+  <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/header.css">
+  <link rel="stylesheet" href="/frontend/src/style/components/tabela.css">
+  <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/main-conteudo.css">
+  <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/imagens.css">
+  <!-- css da tabela -->
+  <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/tabela.css">
 </head>
 
 <body>
   <header>
     <div class="logo-header">
-      <img class="img-logo-header" src="../../publico/logo/logo_guarucum_olho.svg" alt="Logo Guarucum" />
+      <img class="img-logo-header" src="/frontend/public/logo/logo_guarucum_olho.svg" alt="Logo Guarucum" />
     </div>
     <div class="ajuste-navegacao">
       <nav class="navegacao">
@@ -103,7 +114,7 @@
           </li>
           <!-- Estoque -->
           <li>
-            <a href="./estoque.html" class="link-navegacao-lateral">
+            <a href="/frontend/src/pages/sistema-gestao/estoque.html" class="link-navegacao-lateral">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                 fill="#e3e3e3">
                 <path
@@ -126,7 +137,7 @@
         </ul>
       </nav>
       <div class="menu-lateral__help">
-        <a href="../../site-informativo/pages/index.html">
+        <a href="/index.html">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
             <path
               d="M476-280q21 0 35.5-14.5T526-330q0-21-14.5-35.5T476-380q-21 0-35.5 14.5T426-330q0 21 14.5 35.5T476-280Zm-36-154h74q0-17 1.5-29t6.5-23q5-11 12.5-20.5T556-530q35-35 49.5-58.5T620-642q0-53-36-85.5T487-760q-55 0-93.5 27T340-658l66 26q7-27 28-43.5t49-16.5q27 0 45 14.5t18 38.5q0 17-11 36t-37 42q-17 14-27.5 27.5T453-505q-7 15-10 31.5t-3 39.5Zm40 394L360-160H200q-33 0-56.5-23.5T120-240v-560q0-33 23.5-56.5T200-880h560q33 0 56.5 23.5T840-800v560q0 33-23.5 56.5T760-160H600L480-40ZM200-240h192l88 88 88-88h192v-560H200v560Zm280-280Z" />
@@ -161,7 +172,7 @@
           ser um bom período para
           o planejamento para os períodos mais secos que seguirão esta estação.</p>
         <a href="https://jornadaamazonia.org.br/wp-content/uploads/2023/12/Castanha-amazonia.jpg" target="_blank">
-          <img src="../assets/img/pfnms/Castanha-amazonia.jpg" alt="Castanha-amazonia">
+          <img src="/frontend/src/assets/Castanha-amazonia.jpg" alt="Castanha-amazonia">
         </a>
         <br>
         <div class="tabela-responsiva">
@@ -225,7 +236,7 @@
         </p>
         <a href="https://agencia.ac.gov.br/wp-content/uploads/2024/02/20240118102908_IMG_7999-scaled.jpg"
           target="_blank">
-          <img src="../assets/img/pfnms/acai.jpg" alt="">
+          <img src="/frontend/src/assets/acai.jpg" alt="">
         </a>
         <br>
         <div class="tabela-responsiva">
@@ -283,8 +294,9 @@
         <p class="paragrafo">Outro fator importante que merece atenção nesta época do ano é o manejo fitossanitário. A
           redução das chuvas e o aumento da luminosidade podem favorecer o surgimento de ácaros e brocas, assim exigindo
           monitoramento.</p>
-        <a href="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3206873:1647868567/Pupunhas.jpg?f=default&$p$f=a317bfa" target="_blank">
-          <img src="../assets/img/pfnms/Pupunhas.jpg" alt="Pupunha">
+        <a href="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3206873:1647868567/Pupunhas.jpg?f=default&$p$f=a317bfa"
+          target="_blank">
+          <img src="/frontend/src/assets/Pupunhas.jpg" alt="Pupunha">
         </a>
         <br>
         <div class="tabela-responsiva">
@@ -328,7 +340,7 @@
         <br>
       </section>
     </main>
-    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="/frontend/src/scripts/sistema-gestao/main.js"></script>
 </body>
 
 </html>

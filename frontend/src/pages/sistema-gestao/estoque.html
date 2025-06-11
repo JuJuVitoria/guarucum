@@ -5,29 +5,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guarucum - Estoque</title>
-    <link rel="shortcut icon" href="../../publico/logo/logo_guarucum_olho.svg" />
-    <link rel="stylesheet" href="../assets/css/styles.css" /> <!--  -->
-    <link rel="stylesheet" href="../../compartilhado/css/variaveis.css" /> <!-- CSS compartilhado - variáveis -->
-    <link rel="stylesheet" href="../../compartilhado/css/tema.css" /> <!-- CSS compartilhado - tema -->
-    <link rel="stylesheet" href="../../compartilhado/css/tipografia.css" /> <!-- CSS compartilhado - tipográfia -->
-    <link rel="stylesheet" href="../assets/css/header.css" /> <!--  -->
-    <link rel="stylesheet" href="../assets/css/menu-lateral.css" /> <!--  -->
-    <link rel="stylesheet" href="../assets/css/main-conteudo.css"> <!--  -->
-    <link rel="stylesheet" href="..//assets/css/estoque.css">
-    <link rel="stylesheet" href="../assets/css/tabela.css">
+
+    <link rel="shortcut icon" href="/frontend/public/logo/logo_guarucum_olho.svg">
+    <!-- css das regras gerais e do reset -->
+    <link rel="stylesheet" href="/frontend/src/style/vendor/reset.css">
+    <!-- css das variáveis -->
+    <link rel="stylesheet" href="/frontend/src/style/base/variaveis.css">
+    <!-- css das tipografias -->
+    <link rel="stylesheet" href="/frontend/src/style/base/tipografia.css">
+    <!-- css principal -->
+    <link rel="stylesheet" href="/frontend/src/style/main.css">
+    <!-- css da sidebar -->
+    <link rel="stylesheet" href="/frontend/src/style/layout/sidebar.css">
+    <!-- css para alteração do tema DARK ou LIGHT -->
+    <link rel="stylesheet" href="/frontend/src/style/theme/tema.css">
+    <!-- css do header -->
+    <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/header.css">
+    <link rel="stylesheet" href="/frontend/src/style/components/tabela.css">
+    <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/main-conteudo.css">
+    <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/estoque.css">
+    <!-- css da tabela -->
+    <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/tabela.css">
 </head>
 
 <body>
     <header>
         <div class="logo-header">
-            <img class="img-logo-header" src="../../publico/logo/logo_guarucum_olho.svg" alt="Logo Guarucum" />
+            <img class="img-logo-header" src="/frontend/public/logo/logo_guarucum_olho.svg" alt="Logo Guarucum" />
         </div>
         <div class="ajuste-navegacao">
             <nav class="navegacao">
                 <ul class="lista-navegacao">
                     <!--icone mensagem-->
                     <li>
-                        <a href="./dashboard.html" class="link-navegacao">
+                        <a href="/frontend/src/pages/sistema-gestao/dashboard.html" class="link-navegacao">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                                 fill="#e3e3e3">
                                 <path
@@ -303,7 +314,7 @@
                 </table>
             </div>
         </main>
-        <script type="module" src="../assets/js/main.js"></script>
+        <script type="module" src="/frontend/src/scripts/sistema-gestao/main.js"></script>
 </body>
 
 </html>
