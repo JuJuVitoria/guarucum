@@ -1,65 +1,68 @@
-import { showError, removeError } from "./form-validation.js";
+import { showError, removeError, validationEmail } from "./form-validation.js";
 
-let indexSection = 1;
+let currentSectionIndex = 1;
 
-function proxSectionForm(idForm) {
-    const form = document.getElementById(idForm);
+function nextFormSection(formId) {
+    const form = document.getElementById(formId);
     const formSections = form.querySelectorAll('.form-section');
 
-    let allFilled = verifica(formSections, indexSection);
-    if (allFilled == true) {
-        mostraSectionForm(indexSection += 1, formSections);
+    const isSectionValid = validateCurrentSection(formSections, currentSectionIndex);
+    if (isSectionValid) {
+        showFormSection(++currentSectionIndex, formSections);
     }
 }
 
-function anteSectionForm(idForm) {
-    const form = document.getElementById(idForm);
+function previousFormSection(formId) {
+    const form = document.getElementById(formId);
     const formSections = form.querySelectorAll('.form-section');
-    mostraSectionForm(indexSection -= 1, formSections);
+    showFormSection(--currentSectionIndex, formSections);
 }
 
-function verifica(sections, id) {
+function validateCurrentSection(sections, sectionId) {
     const currentSection = Array.from(sections).find(
-        section => section.dataset.section == id
+        section => section.dataset.section == sectionId
     );
-    let allFilled = true;
 
+    let isSectionValid = true;
+    const requiredInputs = currentSection.querySelectorAll('[required]');
 
-    const inputs = currentSection.querySelectorAll('[required]');
+    requiredInputs.forEach(input => {
+        const isEmailField = input.type === 'email';
 
-    inputs.forEach(input => {
         if (!input.value.trim()) {
             showError(input, 'Campo obrigatório');
-            allFilled = false;
+            isSectionValid = false;
+        } else if (isEmailField && !validationEmail(input.value)) {
+            showError(input, 'Digite um e-mail válido');
+            isSectionValid = false;
         } else {
             removeError(input);
         }
     });
 
-    if (allFilled == true) {
-        return allFilled;
-    } else {
-        alert('Por favor, preencha os campos obrigatórios, antes de prossegir!')
-        return allFilled;
+    if (!isSectionValid) {
+        alert('Por favor, preencha os campos obrigatórios corretamente antes de prosseguir!');
     }
+
+    return isSectionValid;
 }
 
-function mostraSectionForm(index, sections) {
+function showFormSection(index, sections) {
     if (sections.length === 0) return;
 
     if (index > sections.length) {
-        indexSection = 1;
+        currentSectionIndex = 1;
     }
     if (index < 1) {
-        indexSection = sections.length
+        currentSectionIndex = sections.length;
     }
 
     sections.forEach(section => {
         section.classList.remove('active');
     });
 
-    sections[indexSection - 1].classList.add('active');
+    sections[currentSectionIndex - 1].classList.add('active');
 }
 
-window.proxSectionForm = proxSectionForm;
-window.anteSectionForm = anteSectionForm;
+window.nextFormSection = nextFormSection;
+window.previousFormSection = previousFormSection;

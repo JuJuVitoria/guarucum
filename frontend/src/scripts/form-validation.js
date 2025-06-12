@@ -1,5 +1,5 @@
 export function validationEmail(email) {
-    return email.includes('@') && email.includes('.');
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 export function showError(element, msg) {
@@ -13,7 +13,6 @@ export function showError(element, msg) {
     }
 
     errorMsg.textContent = msg;
-    errorMsg.style.color = '#9e1a1a';
 }
 
 export function removeError(element) {

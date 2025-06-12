@@ -225,7 +225,7 @@
                         WhatsApp</label>
                 </fieldset>
                 <div class="form-section__btns">
-                    <button type="button" class="form-section__next-btn" onclick="proxSectionForm('form-contato')">
+                    <button type="button" class="form-section__next-btn" onclick="nextFormSection('form-contato')">
                         Próximo
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                             fill="#e3e3e3">
@@ -331,14 +331,14 @@
                         placeholder="Digite sua cidade">
                 </fieldset>
                 <div class="form-section__btns">
-                    <button type="button" class="form-section__prev-btn" onclick="anteSectionForm('form-contato')">
+                    <button type="button" class="form-section__prev-btn" onclick="previousFormSection('form-contato')">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                             fill="#e3e3e3">
                             <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
                         </svg>
                         Anterior
                     </button>
-                    <button type="button" class="form-section__next-btn" onclick="proxSectionForm('form-contato')">
+                    <button type="button" class="form-section__next-btn" onclick="nextFormSection('form-contato')">
                         Próximo
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                             fill="#e3e3e3">
@@ -389,7 +389,7 @@
                 </fieldset>
 
                 <div class="form-section__btns">
-                    <button type="button" class="form-section__prev-btn" onclick="anteSectionForm('form-contato')">
+                    <button type="button" class="form-section__prev-btn" onclick="previousFormSection('form-contato')">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                             fill="#e3e3e3">
                             <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
@@ -399,7 +399,7 @@
                 </div>
                 <!-- Botão de envio -->
 
-                <button class="module-form__btn" type="submit">Enviar</button>
+                <button class="module-form__btn" type="submit" onclick="sendResponse()">Enviar</button>
             </div>
 
         </form>
@@ -898,6 +898,7 @@
 
     <script type="module" src="/frontend/src/scripts/site/main.js"></script>
     <script type="module" src="/frontend/src/scripts/form-section.js"></script>
+    <script src="../../scripts/form.js"></script>
 </body>
 
 </html>
