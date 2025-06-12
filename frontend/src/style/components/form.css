@@ -36,7 +36,6 @@
     box-sizing: border-box;
     background-color: var(--cor-fundo-1);
     padding: .5rem;
-    margin-bottom: 1rem;
     border-radius: 8px;
 }
 
@@ -92,4 +91,10 @@
 .form-section__prev-btn svg,
 .form-section__next-btn svg {
     fill: var(--cor-texto);
+}
+
+/* Mensagem de erro */
+
+.error-message {
+    color: var(--vermelho-md);
 }
