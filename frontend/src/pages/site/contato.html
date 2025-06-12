@@ -192,166 +192,214 @@
     <!-- FORMULÁRIO -->
     <section class="container">
         <!-- Formulário para contato por email -->
-        <form class="module-form" name="contato-por-email" method="post" autocomplete="on" accept-charset="UTF-8">
+        <form id="form-contato" class="module-form" name="contato-por-email" method="post" autocomplete="on"
+            accept-charset="UTF-8">
             <h2 class="module-form__titulo">Contato por Email</h2>
             <hr>
 
-            <!-- Informações básicas -->
-            <fieldset class="module-form__conjunto">
-                <legend class="module-form__conjunto__titulo">Informações Pessoais</legend>
+            <div class="form-section active" data-section="1">
+                <fieldset class="module-form__conjunto">
+                    <legend class="module-form__conjunto__titulo">Informações Pessoais</legend>
 
-                <label class="module-form__label" for="f-nome">Nome completo:</label>
-                <input class="module-form__input" type="text" id="f-nome" name="f-nome" placeholder="Digite seu nome completo" required>
+                    <label class="module-form__label" for="f-nome">Nome completo:</label>
+                    <input class="module-form__input" type="text" id="f-nome" name="f-nome"
+                        placeholder="Digite seu nome completo" required>
 
-                <label class="module-form__label" for="f-telefone">Telefone (opcional):</label>
-                <input class="module-form__input"  type="tel" id="f-telefone" name="f-telefone" placeholder="(XX) XXXXX-XXXX"
-                    pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}">
+                    <label class="module-form__label" for="f-telefone">Telefone (opcional):</label>
+                    <input class="module-form__input" type="tel" id="f-telefone" name="f-telefone"
+                        placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"> <label
+                        class="module-form__label" for="f-email">Email:</label>
+                    <input class="module-form__input" type="email" id="f-email" name="f-email"
+                        placeholder="Digite seu email" required>
+                </fieldset>
 
-                <label class="module-form__label" for="f-email">Email:</label>
-                <input class="module-form__input" type="email" id="f-email" name="f-email" placeholder="Digite seu email" required>
-            </fieldset>
+                <fieldset class="module-form__conjunto">
+                    <legend class="module-form__conjunto__titulo">Preferência de Contato</legend>
 
-            <!-- Preferência de contato -->
-            <fieldset class="module-form__conjunto">
-                <legend class="module-form__conjunto__titulo">Preferência de Contato</legend>
+                    <label class="module-form__label"><input type="radio" name="forma-contato" value="email" checked>
+                        Email</label>
+                    <label class="module-form__label"><input type="radio" name="forma-contato" value="telefone">
+                        Telefone</label>
+                    <label class="module-form__label"><input type="radio" name="forma-contato" value="whatsapp">
+                        WhatsApp</label>
+                </fieldset>
+                <div class="form-section__btns">
+                    <button type="button" class="form-section__next-btn" onclick="proxSectionForm('form-contato')">
+                        Próximo
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e3e3e3">
+                            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
-                <label class="module-form__label"><input type="radio" name="forma-contato" value="email" checked> Email</label>
-                <label class="module-form__label"><input type="radio" name="forma-contato" value="telefone"> Telefone</label>
-                <label class="module-form__label"><input type="radio" name="forma-contato" value="whatsapp"> WhatsApp</label>
-            </fieldset>
+            <div class="form-section" data-section="2">
+                <fieldset class="module-form__conjunto">
+                    <legend class="module-form__conjunto__titulo">Interesses</legend>
 
-            <!-- Interesse -->
-            <fieldset class="module-form__conjunto">
-                <legend class="module-form__conjunto__titulo">Interesses</legend>
+                    <label class="module-form__label"><input type="checkbox" name="interesse" value="comunidade">
+                        Comunidade
+                        Tradicional/Indígena</label>
+                    <label class="module-form__label"><input type="checkbox" name="interesse" value="pesquisador">
+                        Pesquisador/Acadêmico</label>
+                    <label class="module-form__label"><input type="checkbox" name="interesse" value="desenvolvedor">
+                        Desenvolvedor/Técnico</label>
+                    <label class="module-form__label"><input type="checkbox" name="interesse" value="interessado">
+                        Interessado Geral</label>
+                    <label class="module-form__label"><input type="checkbox" name="interesse" value="midia">
+                        Mídia</label>
+                    <label class="module-form__label"><input type="checkbox" name="interesse" value="outro">
+                        Outro</label>
+                </fieldset>
 
-                <label class="module-form__label"><input type="checkbox" name="interesse" value="comunidade"> Comunidade
-                    Tradicional/Indígena</label>
-                <label class="module-form__label"><input type="checkbox" name="interesse" value="pesquisador"> Pesquisador/Acadêmico</label>
-                <label class="module-form__label"><input type="checkbox" name="interesse" value="desenvolvedor"> Desenvolvedor/Técnico</label>
-                <label class="module-form__label"><input type="checkbox" name="interesse" value="interessado"> Interessado Geral</label>
-                <label class="module-form__label"><input type="checkbox" name="interesse" value="midia"> Mídia</label>
-                <label class="module-form__label"><input type="checkbox" name="interesse" value="outro"> Outro</label>
-            </fieldset>
+                <fieldset class="module-form__conjunto">
+                    <legend class="module-form__conjunto__titulo">Localização</legend>
 
-            <!-- Localização -->
-            <fieldset class="module-form__conjunto">
-                <legend class="module-form__conjunto__titulo">Localização</legend>
+                    <label class="module-form__label" for="pais">País:</label>
+                    <select class="module-form__input" id="pais" name="pais" required onchange="gerenciarCampoEstado()">
+                        <option value="" disabled selected>Selecione um país</option>
+                        <optgroup label="América do Sul">
+                            <option value="Argentina">Argentina</option>
+                            <option value="Bolívia">Bolívia</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Colômbia">Colômbia</option>
+                            <option value="Equador">Equador</option>
+                            <option value="Paraguai">Paraguai</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Uruguai">Uruguai</option>
+                            <option value="Venezuela">Venezuela</option>
+                        </optgroup>
+                        <optgroup label="América Central e Caribe">
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Nicarágua">Nicarágua</option>
+                            <option value="Panamá">Panamá</option>
+                            <option value="República Dominicana">República Dominicana</option>
+                        </optgroup>
+                        <optgroup label="América do Norte">
+                            <option value="México">México</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Canadá">Canadá</option>
+                        </optgroup>
+                        <optgroup label="Outros Países">
+                            <option value="Portugal">Portugal</option>
+                        </optgroup>
+                        <option value="Outro">Outro</option>
+                    </select>
 
-                <label class="module-form__label" for="pais">País:</label>
-                <select class="module-form__input" id="pais" name="pais" required onchange="gerenciarCampoEstado()">
-                    <option value="" disabled selected>Selecione um país</option>
-                    <optgroup label="América do Sul">
-                        <option value="Argentina">Argentina</option>
-                        <option value="Bolívia">Bolívia</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Chile">Chile</option>
-                        <option value="Colômbia">Colômbia</option>
-                        <option value="Equador">Equador</option>
-                        <option value="Paraguai">Paraguai</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Uruguai">Uruguai</option>
-                        <option value="Venezuela">Venezuela</option>
-                    </optgroup>
-                    <optgroup label="América Central e Caribe">
-                        <option value="Costa Rica">Costa Rica</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="El Salvador">El Salvador</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Haiti">Haiti</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="Nicarágua">Nicarágua</option>
-                        <option value="Panamá">Panamá</option>
-                        <option value="República Dominicana">República Dominicana</option>
-                    </optgroup>
-                    <optgroup label="América do Norte">
-                        <option value="México">México</option>
-                        <option value="Estados Unidos">Estados Unidos</option>
-                        <option value="Canadá">Canadá</option>
-                    </optgroup>
-                    <optgroup label="Outros Países">
-                        <option value="Portugal">Portugal</option>
-                    </optgroup>
-                    <option value="Outro">Outro</option>
-                </select>
+                    <label class="module-form__label" for="estado">Estado:</label>
+                    <input class="module-form__input" list="estados" id="estado" name="estado">
+                    <datalist id="estados">
+                        <option value="Acre (AC)">
+                        <option value="Alagoas (AL)">
+                        <option value="Amapá (AP)">
+                        <option value="Amazonas (AM)">
+                        <option value="Bahia (BA)">
+                        <option value="Ceará (CE)">
+                        <option value="Distrito Federal (DF)">
+                        <option value="Espírito Santo (ES)">
+                        <option value="Goiás (GO)">
+                        <option value="Maranhão (MA)">
+                        <option value="Mato Grosso (MT)">
+                        <option value="Mato Grosso do Sul (MS)">
+                        <option value="Minas Gerais (MG)">
+                        <option value="Pará (PA)">
+                        <option value="Paraíba (PB)">
+                        <option value="Paraná (PR)">
+                        <option value="Pernambuco (PE)">
+                        <option value="Piauí (PI)">
+                        <option value="Rio de Janeiro (RJ)">
+                        <option value="Rio Grande do Norte (RN)">
+                        <option value="Rio Grande do Sul (RS)">
+                        <option value="Rondônia (RO)">
+                        <option value="Roraima (RR)">
+                        <option value="Santa Catarina (SC)">
+                        <option value="São Paulo (SP)">
+                        <option value="Sergipe (SE)">
+                        <option value="Tocantins (TO)">
+                    </datalist>
 
-                <label class="module-form__label" for="estado">Estado:</label>
-                <input class="module-form__input" list="estados" id="estado" name="estado">
-                <datalist id="estados">
-                    <option value="Acre (AC)">
-                    <option value="Alagoas (AL)">
-                    <option value="Amapá (AP)">
-                    <option value="Amazonas (AM)">
-                    <option value="Bahia (BA)">
-                    <option value="Ceará (CE)">
-                    <option value="Distrito Federal (DF)">
-                    <option value="Espírito Santo (ES)">
-                    <option value="Goiás (GO)">
-                    <option value="Maranhão (MA)">
-                    <option value="Mato Grosso (MT)">
-                    <option value="Mato Grosso do Sul (MS)">
-                    <option value="Minas Gerais (MG)">
-                    <option value="Pará (PA)">
-                    <option value="Paraíba (PB)">
-                    <option value="Paraná (PR)">
-                    <option value="Pernambuco (PE)">
-                    <option value="Piauí (PI)">
-                    <option value="Rio de Janeiro (RJ)">
-                    <option value="Rio Grande do Norte (RN)">
-                    <option value="Rio Grande do Sul (RS)">
-                    <option value="Rondônia (RO)">
-                    <option value="Roraima (RR)">
-                    <option value="Santa Catarina (SC)">
-                    <option value="São Paulo (SP)">
-                    <option value="Sergipe (SE)">
-                    <option value="Tocantins (TO)">
-                </datalist>
+                    <label class="module-form__label" for="cidade">Cidade:</label>
+                    <input class="module-form__input" type="text" id="cidade" name="cidade"
+                        placeholder="Digite sua cidade">
+                </fieldset>
+                <div class="form-section__btns">
+                    <button type="button" class="form-section__prev-btn" onclick="anteSectionForm('form-contato')">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e3e3e3">
+                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                        </svg>
+                        Anterior
+                    </button>
+                    <button type="button" class="form-section__next-btn" onclick="proxSectionForm('form-contato')">
+                        Próximo
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e3e3e3">
+                            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
-                <label class="module-form__label" for="cidade">Cidade:</label>
-                <input class="module-form__input" type="text" id="cidade" name="cidade" placeholder="Digite sua cidade">
-            </fieldset>
+            <div class="form-section" data-section="3">
+                <fieldset class="module-form__conjunto">
+                    <legend class="module-form__conjunto__titulo">Mensagem</legend>
 
-            <!-- Mensagem -->
-            <fieldset class="module-form__conjunto">
-                <legend class="module-form__conjunto__titulo">Mensagem</legend>
+                    <label class="module-form__label" for="f-assunto-select">Assunto:</label>
+                    <select class="module-form__input" id="f-assunto-select" name="f-assunto-select" required>
+                        <option value="" disabled selected>Selecione um assunto</option>
+                        <option value="duvida-geral">Dúvida Geral</option>
+                        <option value="suporte-tecnico">Suporte Técnico</option>
+                        <option value="parceria">Proposta de Parceria</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="outros">Outros</option>
+                    </select>
 
-                <label class="module-form__label" for="f-assunto-select">Assunto:</label>
-                <select class="module-form__input" id="f-assunto-select" name="f-assunto-select" required>
-                    <option value="" disabled selected>Selecione um assunto</option>
-                    <option value="duvida-geral">Dúvida Geral</option>
-                    <option value="suporte-tecnico">Suporte Técnico</option>
-                    <option value="parceria">Proposta de Parceria</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="outros">Outros</option>
-                </select>
+                    <label class="module-form__label" for="f-mensagem">Mensagem:</label>
+                    <textarea class="module-form__input module-form__input-textarea" id="f-mensagem" name="f-mensagem"
+                        placeholder="Digite sua mensagem" rows="8" required></textarea>
+                </fieldset>
 
-                <label class="module-form__label" for="f-mensagem">Mensagem:</label>
-                <textarea class="module-form__input module-form__input-textarea" id="f-mensagem" name="f-mensagem" placeholder="Digite sua mensagem" rows="8"
-                    required></textarea>
-            </fieldset>
+                <fieldset class="module-form__conjunto">
+                    <legend class="module-form__conjunto__titulo">Como nos conheceu?</legend>
 
-            <fieldset class="module-form__conjunto">
-                <legend class="module-form__conjunto__titulo">Como nos conheceu?</legend>
+                    <label class="module-form__label" for="como-conheceu">Selecione uma opção:</label>
+                    <select class="module-form__input" id="como-conheceu" name="como-conheceu" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="pesquisa-google">Pesquisa no Google</option>
+                        <option value="redes-sociais">Redes Sociais</option>
+                        <option value="indicacao">Indicação</option>
+                        <option value="evento">Evento</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </fieldset>
 
-                <label class="module-form__label" for="como-conheceu">Selecione uma opção:</label>
-                <select class="module-form__input" id="como-conheceu" name="como-conheceu" required>
-                    <option value="" disabled selected>Selecione</option>
-                    <option value="pesquisa-google">Pesquisa no Google</option>
-                    <option value="redes-sociais">Redes Sociais</option>
-                    <option value="indicacao">Indicação</option>
-                    <option value="evento">Evento</option>
-                    <option value="outros">Outros</option>
-                </select>
-            </fieldset>
+                <fieldset class="module-form__conjunto">
+                    <legend class="module-form__conjunto__titulo">Avaliação</legend>
 
-            <fieldset class="module-form__conjunto">
-                <legend class="module-form__conjunto__titulo">Avaliação</legend>
+                    <label class="module-form__label" for="points">De 0 a 10, como você avalia nosso projeto?</label>
+                    <input class="module-form__input" type="number" id="points" name="points" min="0" max="10" step="1">
+                </fieldset>
 
-                <label class="module-form__label" for="points">De 0 a 10, como você avalia nosso projeto?</label>
-                <input class="module-form__input" type="number" id="points" name="points" min="0" max="10" step="1">
-            </fieldset>
+                <div class="form-section__btns">
+                    <button type="button" class="form-section__prev-btn" onclick="anteSectionForm('form-contato')">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e3e3e3">
+                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                        </svg>
+                        Anterior
+                    </button>
+                </div>
+                <!-- Botão de envio -->
 
-            <!-- Botão de envio -->
-            <button type="submit">Enviar</button>
+                <button class="module-form__btn" type="submit">Enviar</button>
+            </div>
 
         </form>
 
@@ -848,6 +896,7 @@
     </footer>
 
     <script type="module" src="/frontend/src/scripts/site/main.js"></script>
+    <script src="/frontend/src/scripts/form-contato.js"></script>
 </body>
 
 </html>

@@ -34,7 +34,7 @@
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    background-color: #F1F1F1;
+    background-color: var(--cor-fundo-1);
     padding: .5rem;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -43,4 +43,53 @@
 .module-form__input-textarea {
     width: 100%;
     resize: vertical;
+}
+
+.module-form__btn {
+    display: block;
+    background-color: var(--cor-fundo-1);
+    padding: 0.8rem 2rem;
+    border-radius: 15px;
+    margin: 2rem auto 0 auto;
+}
+
+/* Sections no form */
+
+.form-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 1rem 0;
+}
+
+.form-section.active {
+    display: block;
+    opacity: 1;
+}
+
+.form-section__btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.form-section__prev-btn {
+    margin-right: auto;
+}
+
+.form-section__next-btn {
+    margin-left: auto;
+}
+
+.form-section__prev-btn,
+.form-section__next-btn {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.form-section__prev-btn svg,
+.form-section__next-btn svg {
+    fill: var(--cor-texto);
 }
