@@ -88,7 +88,7 @@ header {
 }
 
 .botao-cadastrar {
-  background-color: var(--cinza-cl);
+  background-color: var(--vermelho-es);
   color: var(--branco);
   padding: .5rem;
   border-radius: 8px;

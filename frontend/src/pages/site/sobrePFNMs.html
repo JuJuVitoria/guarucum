@@ -28,12 +28,14 @@
     <link rel="stylesheet" href="/frontend/src/style/components/carrossel/carrossel-css.css">
     <!-- css para o footer -->
     <link rel="stylesheet" href="/frontend/src/style/layout/footer.css">
+
+    <link rel="stylesheet" href="../../style/components/modal.css">
 </head>
 
 <body>
     <header>
         <!-- Logo -->
-        <img src="/frontend/public/logo/logo_guarucum_olho.svg" class="logo-cabecalho" alt="Logo Olho Guarucum">
+        <img src="../../../public/logo/logo_guarucum_olho.svg" class="logo-cabecalho" alt="Logo Olho Guarucum">
 
         <!-- Conteúdo à direita -->
         <div class="cabecalho-direita flex-center">
@@ -57,10 +59,10 @@
                 <!-- Menu de navegação -->
                 <div class="menu-navegacao" id="menuNavegacao">
                     <ul class="lista-navegacao flex-center">
-                        <li><a href="/index.html" class="link-navegacao paragrafo">Início</a></li>
-                        <li><a href="/frontend/src/pages/site/contato.html" class="link-navegacao paragrafo">Contato</a>
+                        <li><a href="../../../../index.html" class="link-navegacao paragrafo">Início</a></li>
+                        <li><a href="./contato.html" class="link-navegacao paragrafo">Contato</a>
                         </li>
-                        <li><a href="/frontend/src/pages/site/sobrePFNMs.html" class="link-navegacao paragrafo">Sobre
+                        <li><a href="./sobrePFNMs.html" class="link-navegacao paragrafo">Sobre
                                 PFNMs</a></li>
                     </ul>
 
@@ -71,9 +73,8 @@
                         <!-- Botões de autenticação -->
                         <div class="area-autenticacao flex-center">
                             <!-- TEMPORÁRIO - Botão entrar está direcionando para o Dashboard -->
-                            <a href="/frontend/src/pages/sistema-gestao/dashboard.html"
-                                class="botao-entrar paragrafo">Entrar</a>
-                            <a href="#" class="botao-cadastrar paragrafo">Cadastrar</a>
+                            <button onclick="showModal('auth');  authLogin();" class="botao-entrar paragrafo">Entrar</button>
+                            <button onclick="showModal('auth'); authSingup();" class="botao-cadastrar paragrafo">Cadastrar</button>
                         </div>
 
                         <!-- Botões de tema -->
@@ -100,6 +101,50 @@
             </nav>
         </div>
     </header>
+
+    <aside class="module-modal modal-disable" data-modal="auth">
+        <div class="modal__btns">
+            <button class="modal__btns__button order-modal__button--close" onclick="closeModal('auth')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" height="24" fill="#e3e3e3">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </button>
+        </div>
+
+        <div>
+            <img src="../../../public/logo/logo_guarucum_olho.svg" alt="" class="modal__logo">
+        </div>
+
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login" onclick="authLogin()">ENTRAR</button>
+                <button class="auth-tab" data-tab="signup" onclick="authSingup()">CASDASTRAR</button>
+            </div>
+
+            <!-- Login -->
+            <form class="auth-form tab-login active" id="contLogin">
+                <input type="text" placeholder="Usuário" required />
+                <input type="password" placeholder="Senha" required />
+                <label class="auth-checkbox">
+                    <input type="checkbox" />
+                    <span>Continue logado</span>
+                </label>
+                <button type="submit" class="auth-submit">ENTRAR</button>
+                <a href="#" class="auth-link">Esqueceu a senha?</a>
+            </form>
+
+            <!-- Cadastro -->
+            <form class="auth-form tab-signup" id="contSingup">
+                <input type="text" placeholder="Nome" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Senha" required />
+                <input type="password" placeholder="Confirme a senha" required />
+                <button type="submit" class="auth-submit">CASDASTRAR</button>
+            </form>
+        </div>
+    </aside>
+
     <!--Início do texto O QUE SÃO OS PFNMS -->
     <section class="container margin-inicial">
         <h1 class="titulo-principal">O Que São PFNMs?</h1>
@@ -320,6 +365,8 @@
     </footer>
 
     <script type="module" src="/frontend/src/scripts/site/main.js"></script>
+    <script src="../../scripts/modal.js"></script>
+    <script src="../../scripts/auth/auth.js"></script>
 </body>
 
 </html>
