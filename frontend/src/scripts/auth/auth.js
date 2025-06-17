@@ -22,7 +22,7 @@ function authSingup() {
     btnEntrar.classList.remove('active');
 }
 
-// Função para cadastrar usuário
+// cadastro
 function cadastrarUsuario(event) {
     event.preventDefault();
     const nome = document.querySelector('#contSingup input[placeholder="Nome"]').value.trim();
@@ -39,13 +39,12 @@ function cadastrarUsuario(event) {
         return;
     }
 
-    // Salva no localStorage (simulação)
     localStorage.setItem('usuario', JSON.stringify({ nome, email, senha }));
     alert('Cadastro realizado com sucesso! Faça login.');
     authLogin();
 }
 
-// Função para login
+// login
 function fazerLogin(event) {
     event.preventDefault();
     const email = document.querySelector('#contLogin input[placeholder="Usuário"]').value.trim();

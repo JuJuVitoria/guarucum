@@ -1,4 +1,4 @@
-import { showError, removeError, validationEmail } from "./form-validation.js";
+import { showError, removeError, validationEmail, validationNome, validationTextMsg } from "./form-validation.js";
 
 let currentSectionIndex = 1;
 
@@ -24,21 +24,46 @@ function validateCurrentSection(sections, sectionId) {
     );
 
     let isSectionValid = true;
-    const requiredInputs = currentSection.querySelectorAll('[required]');
 
-    requiredInputs.forEach(input => {
-        const isEmailField = input.type === 'email';
+    const nomeInput = currentSection.querySelector('#f-nome');
+    const emailInput = currentSection.querySelector('#f-email');
+    const msgInput = currentSection.querySelector('#f-mensagem');
 
-        if (!input.value.trim()) {
-            showError(input, 'Campo obrigatório');
+    if (nomeInput) {
+        if (!nomeInput.value.trim()) {
+            showError(nomeInput, 'Campo obrigatório');
             isSectionValid = false;
-        } else if (isEmailField && !validationEmail(input.value)) {
-            showError(input, 'Digite um e-mail válido');
+        } else if (!validationNome(nomeInput.value)) {
+            showError(nomeInput, 'Digite o nome completo (nome e sobrenome)');
             isSectionValid = false;
         } else {
-            removeError(input);
+            removeError(nomeInput);
         }
-    });
+    }
+
+    if (emailInput) {
+        if (!emailInput.value.trim()) {
+            showError(emailInput, 'Campo obrigatório');
+            isSectionValid = false;
+        } else if (!validationEmail(emailInput.value)) {
+            showError(emailInput, 'Digite um e-mail válido');
+            isSectionValid = false;
+        } else {
+            removeError(emailInput);
+        }
+    }
+
+    if (msgInput) {
+        if (!msgInput.value.trim()) {
+            showError(msgInput, 'Campo obrigatório');
+            isSectionValid = false;
+        } else if (!validationTextMsg(msgInput.value)) {
+            showError(msgInput, 'A mensagem deve ter entre 30 e 500 caracteres.');
+            isSectionValid = false;
+        } else {
+            removeError(msgInput);
+        }
+    }
 
     if (!isSectionValid) {
         alert('Por favor, preencha os campos obrigatórios corretamente antes de prosseguir!');

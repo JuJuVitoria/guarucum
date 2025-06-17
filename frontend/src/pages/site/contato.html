@@ -74,8 +74,10 @@
                         <!-- Botões de autenticação -->
                         <div class="area-autenticacao flex-center">
                             <!-- TEMPORÁRIO - Botão entrar está direcionando para o Dashboard -->
-                            <button onclick="showModal('auth');  authLogin();" class="botao-entrar paragrafo">Entrar</button>
-                            <button onclick="showModal('auth'); authSingup();" class="botao-cadastrar paragrafo">Cadastrar</button>
+                            <button onclick="showModal('auth');  authLogin();"
+                                class="botao-entrar paragrafo">Entrar</button>
+                            <button onclick="showModal('auth'); authSingup();"
+                                class="botao-cadastrar paragrafo">Cadastrar</button>
                         </div>
 
                         <!-- Botões de tema -->
@@ -237,8 +239,7 @@
     <!-- FORMULÁRIO -->
     <section class="container">
         <!-- Formulário para contato por email -->
-        <form id="form-contato" class="module-form" name="contato-por-email" autocomplete="on"
-            accept-charset="UTF-8">
+        <form id="form-contato" class="module-form" name="contato-por-email" autocomplete="on" accept-charset="UTF-8">
             <h2 class="module-form__titulo">Contato por Email</h2>
             <hr>
 
@@ -252,9 +253,9 @@
 
                     <label class="module-form__label" for="f-telefone">Telefone (opcional):</label>
                     <input class="module-form__input" type="tel" id="f-telefone" name="f-telefone"
-                        placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"> 
-                    
-                        <label class="module-form__label" for="f-email">Email:</label>
+                        placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}">
+
+                    <label class="module-form__label" for="f-email">Email:</label>
                     <input class="module-form__input" type="email" id="f-email" name="f-email"
                         placeholder="Digite seu email" required>
                 </fieldset>
@@ -409,7 +410,10 @@
 
                     <label class="module-form__label" for="f-mensagem">Mensagem:</label>
                     <textarea class="module-form__input module-form__input-textarea" id="f-mensagem" name="f-mensagem"
-                        placeholder="Digite sua mensagem" rows="8" required></textarea>
+                        placeholder="Digite sua mensagem (mínimo 30 caracteres)" rows="8" required minlength="30"
+                        maxlength="500">
+                    </textarea>
+
                 </fieldset>
 
                 <fieldset class="module-form__conjunto">
@@ -444,7 +448,7 @@
                 </div>
                 <!-- Botão de envio -->
 
-                <button class="module-form__btn" type="submit" onclick="sendResponse()">Enviar</button>
+                <button class="module-form__btn" type="submit" onclick="sendResponse(event)">Enviar</button>
             </div>
 
         </form>
@@ -494,9 +498,7 @@
                         <!-- Nome -->
                         <h4 class="titulo-complementar">Julia Vitoria Da Luz</h4>
                         <!-- Sobre -->
-                        <p class="paragrafo">Meu nome é Julia Vitória Da Luz, atualmente trabalho em uma loja de
-                            informática, realizando manutenção de hardware em computadores, impressoras e outros
-                            dispositivos. Ao longo da minha trajetória, tive a honra de vencer o concurso Agrinho duas
+                        <p class="paragrafo">Meu nome é Julia Vitória Da Luz. Ao longo da minha trajetória, tive a honra de vencer o concurso Agrinho duas
                             vezes e, recentemente, alcancei a terceira fase da ONIA (Olimpíada Nacional de Inteligência
                             Artificial), conquistas que reforçam minha paixão pela área de tecnologia. Estou
                             constantemente buscando ampliar meus conhecimentos, estudando desde front-end, envolvendo
@@ -704,8 +706,7 @@
                     <div class="slide-integrantes">
                         <div class="slide-integrantes">
                             <!-- Foto -->
-                            <img src="../../assets/foto-integrantes/foto-bernardo.jpg" class="foto-integrante"
-                                alt="">
+                            <img src="../../assets/foto-integrantes/foto-bernardo.jpg" class="foto-integrante" alt="">
                             <!-- Nome -->
                             <h4 class="titulo-complementar">Bernardo Santos Ferretti Barbosa</h4>
                             <!-- Sobre -->
@@ -943,7 +944,7 @@
 
     <script type="module" src="../../scripts/site/main.js"></script>
     <script type="module" src="../../scripts/shared/form-section.js"></script>
-    <script src="../../scripts/shared/form.js"></script>
+    <script type="module" src="../../scripts/shared/form.js"></script>
     <script src="../../scripts/shared/modal.js"></script>
     <script src="../../scripts/auth/auth.js"></script>
 </body>

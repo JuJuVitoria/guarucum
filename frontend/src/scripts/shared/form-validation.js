@@ -2,6 +2,15 @@ export function validationEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+export function validationNome(nome) {
+    return nome.trim().split(/\s+/).length >= 2;
+}
+
+export function validationTextMsg(txt) {
+    const length = txt.trim().length;
+    return length >= 30 && length <= 500;
+}
+
 export function showError(element, msg) {
     element.classList.add('error');
     let errorMsg = element.nextElementSibling;
