@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+/* CONTAINER  de 800px */
+.container {
+    width: calc(100% - 40px);
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-inicial {
+    margin-top: 7rem;
+}
+
+/* Botão */
+.botao {
+    background-color: var(--verde-es);
+    color: var(--branco);
+    padding: .5rem 1rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* MODAL */
+
+body.body-modal-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100vw;
+}
+
+.site-content.blur {
+    filter: blur(6px);
+    pointer-events: none;
+    user-select: none;
+    transition: filter 0.3s;
+}

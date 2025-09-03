@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="claro">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guarucum - Dashboard</title>
+
+  <link rel="shortcut icon" href="/frontend/public/logo/logo_guarucum_olho.svg">
+  <!-- css das regras gerais e do reset -->
+  <link rel="stylesheet" href="/frontend/src/style/vendor/reset.css">
+  <!-- css das variáveis -->
+  <link rel="stylesheet" href="/frontend/src/style/base/variaveis.css">
+  <!-- css das tipografias -->
+  <link rel="stylesheet" href="/frontend/src/style/base/tipografia.css">
+  <!-- css principal -->
+  <link rel="stylesheet" href="/frontend/src/style/main.css">
+  <!-- css da sidebar -->
+  <link rel="stylesheet" href="/frontend/src/style/layout/sidebar.css">
+  <!-- css para alteração do tema DARK ou LIGHT -->
+  <link rel="stylesheet" href="/frontend/src/style/theme/tema.css">
+  <!-- css do header -->
+  <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/header.css">
+  <link rel="stylesheet" href="/frontend/src/style/components/tabela.css">
+  <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/main-conteudo.css">
+  <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/imagens.css">
+  <!-- css da tabela -->
+  <link rel="stylesheet" href="/frontend/src/style/sistema-gestao/css/tabela.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-header">
+      <img class="img-logo-header" src="/frontend/public/logo/logo_guarucum_olho.svg" alt="Logo Guarucum" />
+    </div>
+    <div class="ajuste-navegacao">
+      <nav class="navegacao">
+        <ul class="lista-navegacao">
+          <!--icone notificação-->
+          <li>
+            <a href="#" class="link-navegacao">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#1f1f1f">
+                <path
+                  d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
+              </svg>
+            </a>
+          </li>
+          <!--icone mensagem-->
+          <li>
+            <a href="#" class="link-navegacao">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#1f1f1f">
+                <path
+                  d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+              </svg>
+            </a>
+          </li>
+          <!--icone usuario-->
+          <li>
+            <a href="#" class="link-navegacao">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#1f1f1f">
+                <path
+                  d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="controle-tema flex-center">
+        <!-- Botão tema claro -->
+        <a href="#" class="btn-modo-light">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path
+              d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z" />
+          </svg>
+        </a>
+        <!-- Botão tema escuro -->
+        <a href="#" class="btn-modo-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path
+              d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="menu-lateral">
+      <nav class="menu-lateral__nav">
+        <ul>
+          <!-- Configuração -->
+          <li>
+            <a href="#" class="link-navegacao-lateral">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#1f1f1f">
+                <path
+                  d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+              </svg>
+              <p class="paragrafo">Configuração</p>
+            </a>
+          </li>
+          <!-- Análise -->
+          <li>
+            <a href="#" class="link-navegacao-lateral">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#e3e3e3">
+                <path
+                  d="M280-280h80v-280h-80v280Zm160 0h80v-400h-80v400Zm160 0h80v-160h-80v160ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
+              </svg>
+              <p class="paragrafo">Análise</p>
+            </a>
+          </li>
+          <!-- Estoque -->
+          <li>
+            <a href="/frontend/src/pages/sistema-gestao/estoque.html" class="link-navegacao-lateral">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#e3e3e3">
+                <path
+                  d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z" />
+              </svg>
+              <p class="paragrafo">Estoque</p>
+            </a>
+          </li>
+          <!-- Documentos -->
+          <li>
+            <a href="#" class="link-navegacao-lateral">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#e3e3e3">
+                <path
+                  d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z" />
+              </svg>
+              <p class="paragrafo">Documentos</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-lateral__help">
+        <a href="/index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path
+              d="M476-280q21 0 35.5-14.5T526-330q0-21-14.5-35.5T476-380q-21 0-35.5 14.5T426-330q0 21 14.5 35.5T476-280Zm-36-154h74q0-17 1.5-29t6.5-23q5-11 12.5-20.5T556-530q35-35 49.5-58.5T620-642q0-53-36-85.5T487-760q-55 0-93.5 27T340-658l66 26q7-27 28-43.5t49-16.5q27 0 45 14.5t18 38.5q0 17-11 36t-37 42q-17 14-27.5 27.5T453-505q-7 15-10 31.5t-3 39.5Zm40 394L360-160H200q-33 0-56.5-23.5T120-240v-560q0-33 23.5-56.5T200-880h560q33 0 56.5 23.5T840-800v560q0 33-23.5 56.5T760-160H600L480-40ZM200-240h192l88 88 88-88h192v-560H200v560Zm280-280Z" />
+          </svg>
+          <p class="paragrafo">Fale com nós</p>
+        </a>
+      </div>
+    </div>
+    <main>
+      <h1 class="titulo-principal">Informativo</h1>
+      <h2 class="subtitulo-primario">Outono em relação aos principais pfnms da região norte:</h2>
+
+      <section>
+        <br>
+        <h3 class="subtitulo-secundario">Castanha-do-Pará:</h3>
+        <p class="paragrafo">É necessário cuidados com uma possível excessiva umidade do solo pois no começo do outono
+          ainda há um resquício
+          das chuvas na região, ainda que menor intensidade. Assim sendo necessário avaliar a possibilidade de
+          drenagem.
+        </p>
+        <p class="paragrafo">Além disso o outono pode favorecer o aparecimento de fungos e brocas, principalmente em
+          áreas
+          de mais sombra e
+          umidade. Sendo interessante o monitoramento de podridão parda dos fungos e broca-da-castanha (Conotrachelus
+          spp.).</p>
+        <p class="paragrafo">A coleta das castanhas do chão das florestas ocorre entre dezembro e junho, entre maio e
+          junho ainda há castanhas
+          no chão para serem colhidas. Dar maior atenção a possibilidade de perda das castanhas por apodrecimento e
+          contaminação por fungos como o Aspergillus flavus.</p>
+        <p class="paragrafo">O outono também é uma boa época para o monitoramento e proteção de mudas naturais, além
+          de
+          ser um bom período para
+          o planejamento para os períodos mais secos que seguirão esta estação.</p>
+        <a href="https://jornadaamazonia.org.br/wp-content/uploads/2023/12/Castanha-amazonia.jpg" target="_blank">
+          <img src="/frontend/src/assets/Castanha-amazonia.jpg" alt="Castanha-amazonia">
+        </a>
+        <br>
+        <div class="tabela-responsiva">
+          <table>
+            <thead>
+              <tr>
+                <th>Período</th> <!-- Primeira coluna -->
+                <th>Fase do Ciclo</th> <!-- Segunda coluna -->
+                <th>Atividades Recomendadas</th> <!-- Terceira coluna -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr> <!-- Segunda linha -->
+                <td>Janeiro – Março</td> <!-- Primeira coluna -->
+                <td>Queda dos frutos e início da coleta</td> <!-- Segunda coluna -->
+                <td>Coleta manual no chão da floresta, transporte, início do beneficiamento e secagem</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Terceira linha -->
+                <td>Abril – Junho</td> <!-- Primeira coluna -->
+                <td>Final da coleta e início da limpeza do terreno</td> <!-- Segunda coluna -->
+                <td>Limpeza do sub-bosque, manutenção das trilhas, secagem e armazenamento das castanhas</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Quarta linha -->
+                <td>Julho – Setembro</td> <!-- Primeira coluna -->
+                <td>Dormência e planejamento</td> <!-- Segunda coluna -->
+                <td>Classificação das sementes, podas de formação, planejamento da próxima coleta</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Quinta linha -->
+                <td>Outubro – Dezembro</td> <!-- Primeira coluna -->
+                <td>Floração e frutificação</td> <!-- Segunda coluna -->
+                <td>Monitoramento da floração, proteção de mudas, controle de pragas e avaliação da produção</td>
+                <!-- Terceira coluna -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section> <!-- Seção sobre açaí -->
+        <br>
+        <h3 class="subtitulo-secundario">Açaí:</h3>
+        <p class="paragrafo">Principalmente no cultivo de açaí feito em áreas de várzea ou terra firme o outono vai
+          representar um período crítico para o desenvolvimento vegetativo e preparo para a próxima floração. É
+          essencial garantir o controle da drenagem em áreas com excesso de água, já que as plantas ainda estão em
+          crescimento e o solo permanece úmido, assim evitando doenças fúngicas como a antracnose.
+        </p>
+        <p class="paragrafo"> Além disso, o outono representa uma época ideal para a manutenção da adubação, pois com
+          a
+          combinação da umidade residual e o aumento da luminosidade, ocorre o favorecimento da absorção de nutrientes
+          essenciais.
+        </p>
+        <p class="paragrafo">Em áreas em que o cultivo dos frutos é voltado para a polpa, o outono representa a fase
+          preparatória para a safra principal, que geralmente ocorre entre agosto e dezembro.
+        </p>
+        <p class="paragrafo">Já nos açaizais nativos que são manejados de forma extrativista é importante que as
+          comunidades façam o mapeamento das áreas produtivas e o planejamento da colheita futura, e observem o
+          comportamento das águas dos igarapés e rios.
+        </p>
+        <a href="https://agencia.ac.gov.br/wp-content/uploads/2024/02/20240118102908_IMG_7999-scaled.jpg"
+          target="_blank">
+          <img src="/frontend/src/assets/acai.jpg" alt="">
+        </a>
+        <br>
+        <div class="tabela-responsiva">
+          <table>
+            <thead>
+              <tr>
+                <th>Período</th> <!-- Primeira coluna -->
+                <th>Fase do Ciclo</th> <!-- Segunda coluna -->
+                <th>Atividades Recomendadas</th> <!-- Terceira coluna -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr> <!-- Segunda linha -->
+                <td>Janeiro – Março</td> <!-- Primeira coluna -->
+                <td>Frutificação e colheita (várzea)</td> <!-- Segunda coluna -->
+                <td>Colheita seletiva, transporte, início do beneficiamento</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Terceira linha -->
+                <td>Abril – Junho</td> <!-- Primeira coluna -->
+                <td>Desenvolvimento vegetativo</td> <!-- Segunda coluna -->
+                <td>Adubação, irrigação de suporte, podas, controle de pragas</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Quarta linha -->
+                <td>Julho – Setembro</td> <!-- Primeira coluna -->
+                <td>Início da floração (terra firme)</td> <!-- Segunda coluna -->
+                <td>Monitoramento nutricional e hídrico, adubação foliar</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Quinta linha -->
+                <td>Outubro – Dezembro</td> <!-- Primeira coluna -->
+                <td>Safra principal (terra firme)</td> <!-- Segunda coluna -->
+                <td>Colheita intensiva, transporte, beneficiamento</td>
+                <!-- Terceira coluna -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+      </section>
+
+      <section>
+        <h3 class="subtitulo-secundario">Pupunha</h3>
+        <p class="paragrafo">O outono representa um período favorável onde a pupunheira encontra possibilidades para
+          crescimento vegetativo, especialmente em solos ainda úmidos. Este é um período ideal para o plantio de mudas,
+          pois a umidade residual irá ajudar no pegamento das plantas assim reduzindo a necessidade de irrigação de
+          suporte. No entanto, ainda sim é essencial garantir que o solo esteja bem drenado, pois o excesso de umidade
+          favorece o surgimento de doenças como antracnose e podridão do estipe. </p>
+        <p class="paragrafo">Em sistemas de cultivo para o palmito, o outono se faz um bom momento para monitorar o
+          crescimento dos perfilhos que irão definir a produtividade futura da área. Já para o cultivo que é destinado à
+          produção de frutos, esta estação irá marcar a transição entre a colheita e a indução floral, assim exigindo a
+          adubação de manutenção e controle do mato.
+        </p>
+        <p class="paragrafo">Outro fator importante que merece atenção nesta época do ano é o manejo fitossanitário. A
+          redução das chuvas e o aumento da luminosidade podem favorecer o surgimento de ácaros e brocas, assim exigindo
+          monitoramento.</p>
+        <a href="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3206873:1647868567/Pupunhas.jpg?f=default&$p$f=a317bfa"
+          target="_blank">
+          <img src="/frontend/src/assets/Pupunhas.jpg" alt="Pupunha">
+        </a>
+        <br>
+        <div class="tabela-responsiva">
+          <table>
+            <thead>
+              <tr>
+                <th>Período</th> <!-- Primeira coluna -->
+                <th>Fase do Ciclo</th> <!-- Segunda coluna -->
+                <th>Atividades Recomendadas</th> <!-- Terceira coluna -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr> <!-- Segunda linha -->
+                <td>Janeiro – Março</td> <!-- Primeira coluna -->
+                <td>Colheita de frutos / crescimento vegetativo</td> <!-- Segunda coluna -->
+                <td>Colheita de frutos maduros, irrigação de suporte, limpeza da área, adubação de produção</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Terceira linha -->
+                <td>Abril – Junho</td> <!-- Primeira coluna -->
+                <td>Plantio e manejo vegetativo (outono)</td> <!-- Segunda coluna -->
+                <td>Plantio de mudas, controle de mato, monitoramento de pragas, manejo de perfilhos</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Quarta linha -->
+                <td>Julho – Setembro</td> <!-- Primeira coluna -->
+                <td>Desenvolvimento e formação de perfilhos</td> <!-- Segunda coluna -->
+                <td>Poda seletiva, adubação de manutenção, desbaste de plantas fracas ou mal formadas</td>
+                <!-- Terceira coluna -->
+              </tr>
+              <tr> <!-- Quinta linha -->
+                <td>Outubro – Dezembro</td> <!-- Primeira coluna -->
+                <td>Floração e frutificação (em áreas de clima temperado)</td> <!-- Segunda coluna -->
+                <td>Monitoramento de pragas e doenças da floração e frutificação, polinização (se necessário), raleio de
+                  frutos (se necessário), irrigação adequada à fase, adubação de cobertura (se necessário)</td>
+                <!-- Terceira coluna -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+      </section>
+    </main>
+    <script type="module" src="/frontend/src/scripts/sistema-gestao/main.js"></script>
+</body>
+
+</html>
