@@ -1,7 +1,1 @@
-export default function Dashboard() {
-    return (
-        <>
-            <h1>Guarucum</h1>
-        </>
-    );
-}
+export { default } from "./Dashboard"

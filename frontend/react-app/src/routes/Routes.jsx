@@ -12,7 +12,7 @@ function AppRoutes() {
           element={<Dashboard />}
         />
         <Route 
-          path="/estoque" 
+          path="/Estoque" 
           element={<Estoque />}
         />
         <Route 
