@@ -1,7 +1,1 @@
-export default function Estoque() {
-    return (
-        <>
-        
-        </>
-    );
-}
+export { default } from './Estoque'

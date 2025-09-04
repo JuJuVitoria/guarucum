@@ -6,7 +6,7 @@ export default function MainLayout({ children }) {
             <div className="row">
                 <Sidebar />
 
-                <main className="col-sm p-3 min-vh-100">
+                <main className="col-sm p-4 min-vh-100">
                     {children}
                 </main>
             </div>
