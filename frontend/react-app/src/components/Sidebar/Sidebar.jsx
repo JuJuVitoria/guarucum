@@ -24,7 +24,7 @@ export default function Sidebar() {
                 <ul className="nav nav-pills nav-flush flex-md-column flex-row mb-auto text-center gap-2">
                     {itens.map((item, index) => (
                         <li key={index} className="nav-item">
-                            <Link to={`/${item}`} className="nav-link">
+                            <Link to={item !== "Dashboard" ? `/${item}` : "/"} className="nav-link">
                                 {iconsMap[item] || null}
                             </Link>
                         </li>

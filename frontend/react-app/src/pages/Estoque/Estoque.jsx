@@ -35,6 +35,8 @@ export default function Estoque() {
     <MainLayout>
       <h1 className="text-center my-4">Seu estoque</h1>
 
+      <hr />
+
       <FormEstoque onSalvar={handleSalvar} produtoEditando={produtoEditando} />
       <TabelaEstoque
         produtos={produtos}
