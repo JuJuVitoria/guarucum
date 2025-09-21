@@ -1,8 +1,8 @@
 import { useState } from "react";
-import MainLayout from "../../layout/MainLayout";
-import TabelaEstoque from "../../components/TabelaEstoque";
-import FormEstoque from "../../components/FormEstoque/FormEstoque";
-import { produtos as dadosMock } from "../../data/estoque";
+import MainLayout from "@/app/layout/MainLayout";
+import TabelaEstoque from "@/app/components/TabelaEstoque";
+import FormEstoque from "@/app/components/FormEstoque/FormEstoque";
+import { produtos as dadosMock } from "../../../data/estoque";
 
 export default function Estoque() {
   const [produtos, setProdutos] = useState(dadosMock);

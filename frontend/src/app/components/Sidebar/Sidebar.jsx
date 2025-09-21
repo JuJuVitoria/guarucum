@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/icon/logoGuarucumOlho.svg"
-import { navigation } from "../../data/navigation";
+import logo from "../../../assets/icon/logoGuarucumOlho.svg"
+import { navigation } from "../../../data/navigation";
 import "./Sidebar.scss"
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { LuLayoutDashboard, LuShoppingCart, LuBox } from "react-icons/lu";

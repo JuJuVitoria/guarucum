@@ -1,5 +1,5 @@
-import Dashboard from "../pages/Dashboard";
-import Estoque from "../pages/Estoque";
+import Dashboard from "@/app/pages/Dashboard";
+import Estoque from "@/app/pages/Estoque";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function AppRoutes() {
@@ -12,7 +12,11 @@ function AppRoutes() {
           element={<Dashboard />}
         />
         <Route 
-          path="/Estoque" 
+          path="/app/dashboard" 
+          element={<Dashboard />}
+        />
+        <Route 
+          path="/app/estoque" 
           element={<Estoque />}
         />
         <Route 
