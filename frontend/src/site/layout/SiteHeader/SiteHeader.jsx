@@ -1,0 +1,86 @@
+import React, { useState } from 'react';
+import logo from "../../../assets/icon/logoGuarucumOlho.svg"
+import { FiSun, FiMoon } from 'react-icons/fi';
+import './SiteHeader.scss';
+
+export default function SiteHeader() {
+  const [menuAtivo, setMenuAtivo] = useState(false);
+  const [modoEscuro, setModoEscuro] = useState(false);
+
+  const alternarMenu = () => {
+    setMenuAtivo(!menuAtivo);
+  };
+
+  const alternarTema = () => {
+    setModoEscuro(!modoEscuro);
+    const html = document.documentElement;
+    if (!modoEscuro) {
+      html.setAttribute('data-theme', 'escuro');
+    } else {
+      html.setAttribute('data-theme', 'claro');
+    }
+  };
+
+  React.useEffect(() => {
+    // Seta o tema inicial na carga
+    document.documentElement.setAttribute('data-theme', modoEscuro ? 'escuro' : 'claro');
+  }, [modoEscuro]);
+
+  return (
+    <header className={`header ${menuAtivo ? 'header--menu-ativo' : ''}`}>
+      <img src={logo} alt="Logo Olho Guarucum" className="logo-cabecalho" />
+
+      <div className="cabecalho-direita">
+        <nav className="navegacao">
+          <div className="controle-menu-mobile">
+            <button
+              aria-label="Abrir menu"
+              className={`btn-abrir-menu ${menuAtivo ? 'oculto' : ''}`}
+              onClick={alternarMenu}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 -960 960 960">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+              </svg>
+            </button>
+            <button
+              aria-label="Fechar menu"
+              className={`btn-fechar-menu ${menuAtivo ? '' : 'oculto'}`}
+              onClick={alternarMenu}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 -960 960 960">
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+              </svg>
+            </button>
+          </div>
+
+          <div className={`menu-navegacao ${menuAtivo ? 'menu-ativo' : ''}`}>
+            <ul className="lista-navegacao">
+              <li><a href="../../../../index.html">Início</a></li>
+              <li><a href="./contato.html">Contato</a></li>
+              <li><a href="./sobrePFNMs.html">Sobre PFNMs</a></li>
+            </ul>
+
+            <div className="linha-divisoria"></div>
+
+            <div className="botoes-finais">
+              <div className="area-autenticacao">
+                <button className="botao-entrar">Entrar</button>
+                <button className="botao-cadastrar">Cadastrar</button>
+              </div>
+
+              <div className="controle-tema">
+                <button onClick={alternarTema} aria-label="Alternar tema" className={modoEscuro ? 'ativo' : ''}>
+                  {modoEscuro ? (
+                    <FiSun size={24} color="#e3e3e3" />
+                  ) : (
+                    <FiMoon size={24} color="#e3e3e3" />
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  )
+}
