@@ -7,6 +7,7 @@ import Home from "@/site/pages/Home";
 import PrivateRoutes from "./PrivatesRoutes";
 import PublicRoutes from "./PublicRoutes";
 import Error404 from "@/shared/Pages/error404";
+import Contato from "@/site/pages/Contato/Contato";
 
 const PrivateRoute = () => {
   const isAuthenticated = !!localStorage.getItem('token');
@@ -19,6 +20,7 @@ function AppRoutes() {
       <Routes>
         
         <Route path="/" element={<Home />} />
+        <Route path="/contato" element={<Contato />}/>
 
         <Route element={<PublicRoutes />}>
           <Route path="/login" element={<Login />} />

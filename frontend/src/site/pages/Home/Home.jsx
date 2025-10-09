@@ -3,9 +3,28 @@ import { Text } from "@/shared/components/Text/Text";
 import textosData from "@/site/locales/pt.json";
 import "./Home.scss";
 import tituloLogo from "@/assets/icon/tituloGuarucum.svg";
+import { CarouselSlider } from "@/shared/components/CarouselSlider/CarouselSlider";
 
 export default function Home() {
   const texto = textosData.pageSiteInicio;
+
+  const slidesData = [
+    {
+      image: "https://cdn.pixabay.com/photo/2019/11/22/13/37/rio-negro-4644907_1280.jpg",
+      alt: "Rio Negro",
+      caption: "Foto 1: Rio Negro"
+    },
+    {
+      image: "https://cdn.pixabay.com/photo/2019/11/22/13/37/acai-4644906_1280.jpg",
+      alt: "Açaí",
+      caption: "Foto 2: Açaí"
+    },
+    {
+      image: "https://cdn.pixabay.com/photo/2019/11/22/13/36/ilha-do-mel-4644899_1280.jpg",
+      alt: "Ilha do Mel",
+      caption: "Foto 3: Ilha do Mel"
+    }
+  ];
 
   return (
     <SiteLayout>
@@ -47,6 +66,7 @@ export default function Home() {
               src="https://www.youtube.com/embed/vHATEmuwsaE?si=8JEWgz82BEgoYc1G"
               title="YouTube video player"
               frameBorder="0"
+              loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
@@ -86,33 +106,9 @@ export default function Home() {
         <Text>{texto.secao5Paragrafo2}</Text>
       </section>
 
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2019/11/22/13/37/rio-negro-4644907_1280.jpg" alt="First slide" />
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2019/11/22/13/37/acai-4644906_1280.jpg" alt="Second slide" />
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2019/11/22/13/36/ilha-do-mel-4644899_1280.jpg" alt="Third slide" />
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
+      <section className="container my-4" style={{ maxWidth: '800px' }}>
+        <CarouselSlider id="carrosselHome" slides={slidesData} />
+      </section>
 
       <section className="container">
         <Text variant="h2">{texto.secao7Titulo}</Text>

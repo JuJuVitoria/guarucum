@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from "../../../assets/icon/logoGuarucumOlho.svg"
 import { FiSun, FiMoon } from 'react-icons/fi';
 import './SiteHeader.scss';
+import { Link } from 'react-router-dom';
 
 export default function SiteHeader() {
   const [menuAtivo, setMenuAtivo] = useState(false);
@@ -55,9 +56,9 @@ export default function SiteHeader() {
 
           <div className={`menu-navegacao ${menuAtivo ? 'menu-ativo' : ''}`}>
             <ul className="lista-navegacao">
-              <li><a href="../../../../index.html">Início</a></li>
-              <li><a href="./contato.html">Contato</a></li>
-              <li><a href="./sobrePFNMs.html">Sobre PFNMs</a></li>
+              <li><Link to="/">Início</Link></li>
+              <li><Link to="/contato">Contato</Link></li>
+              <li><Link to="/sobre-pfnms">Sobre PFNMs</Link></li>
             </ul>
 
             <div className="linha-divisoria"></div>

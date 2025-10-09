@@ -116,8 +116,8 @@
         "secaoIntegrantesParagrafo5": "O Guarucum é mais do que uma atividade curricular — é uma oportunidade de crescimento coletivo, de aplicação prática dos nossos estudos e de contribuição concreta para um futuro mais justo e sustentável.",
         "secaoIntegrantesParagrafo6": "Por trás do projeto Guarucum está um time formado por cinco estudantes apaixonados por tecnologia, inovação e impacto social. Unidos por um objetivo comum, trabalhamos de forma colaborativa, explorando diferentes perspectivas e habilidades para desenvolver uma solução que contribua ativamente com os desafios propostos pelo ODS 2.",
         "secaoIntegrantesParagrafo7": "Cada integrante do grupo traz sua própria bagagem, visão e força para o projeto — e é justamente essa diversidade que torna o Guarucum tão especial. Mais do que colegas de classe, somos parceiros de jornada, aprendendo e crescendo juntos a cada etapa desse processo.",
-        "secaoIntegrantesSubtitulo2": "Integrantes",
-        "integrantes": [
+        "secaoIntegrantesSubtitulo2": "Integrantes atuais:",
+        "integrantesAtuais": [
             {
                 "nome": "Julia Vitoria Da Luz",
                 "descricao": "Meu nome é Julia Vitória Da Luz. Ao longo da minha trajetória, tive a honra de vencer o concurso Agrinho duas vezes e, recentemente, alcancei a terceira fase da ONIA (Olimpíada Nacional de Inteligência Artificial), conquistas que reforçam minha paixão pela área de tecnologia. Estou constantemente buscando ampliar meus conhecimentos, estudando desde front-end, envolvendo design e desenvolvimento, até back-end, para me tornar uma profissional completa. Tenho facilidade em aprender novos conteúdos, principalmente quando me identifico com o assunto, e sou reconhecida pela minha organização, dedicação e vontade de ajudar os outros. Acredito que o aprendizado contínuo e o compromisso com a excelência são fundamentais para meu crescimento pessoal e profissional.",
@@ -125,22 +125,38 @@
                 "linkedin": "https://www.linkedin.com/in/julia-vitoria-da-luz-32a16927b"
             },
             {
-                "nome": "Isabela Alaminos Encinas",
-                "descricao": "Meu nome é Isabela, tenho vinte anos e sou de Curitiba. Sou apaixonada por Gamedev e Front-end e amo trabalhar com Design. Amo a ideia de usar tecnologia para ajudar no cotidiano das pessoas e na resolução de problemas presentes na sociedade. Sou uma pessoa muito versátil e adoro trabalhar em diferentes temas e áreas ao mesmo tempo. Estou muito feliz em fazer parte da equipe de desenvolvimento do projeto Guarucum!!",
-                "github": "https://github.com/alaminosisabela",
-                "linkedin": "https://www.linkedin.com/in/isabela-alaminos-encinas-108b20220"
+                "nome": "Arlen Gonçalves da Silva",
+                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae libero mauris. Sed dictum fermentum justo, a facilisis ipsum ultrices tristique. Nunc vel eros sit amet magna rhoncus porta. Aliquam lobortis ultricies neque, ac cursus libero laoreet molestie. Suspendisse posuere ante sed mollis elementum. Aenean quis fringilla diam. Ut vulputate, augue vitae varius lacinia, arcu dolor accumsan diam, ac fermentum nulla ante vel massa. Phasellus bibendum, odio eget dapibus facilisis, neque augue pharetra dolor, in varius justo justo at lorem. Nunc eu egestas quam. Maecenas lacus lacus, molestie eget sem et, interdum lacinia turpis.",
+                "github": "https://github.com/arll3nn",
+                "linkedin": "#"
+            },
+            {
+                "nome": "Vitor Augusto Longaretti",
+                "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae libero mauris. Sed dictum fermentum justo, a facilisis ipsum ultrices tristique. Nunc vel eros sit amet magna rhoncus porta. Aliquam lobortis ultricies neque, ac cursus libero laoreet molestie. Suspendisse posuere ante sed mollis elementum. Aenean quis fringilla diam. Ut vulputate, augue vitae varius lacinia, arcu dolor accumsan diam, ac fermentum nulla ante vel massa. Phasellus bibendum, odio eget dapibus facilisis, neque augue pharetra dolor, in varius justo justo at lorem. Nunc eu egestas quam. Maecenas lacus lacus, molestie eget sem et, interdum lacinia turpis.",
+                "github": "#",
+                "linkedin": "#"
             },
             {
                 "nome": "João Pedro Balbinot Marin",
-                "descricao": "[translate:Eu me chamo João, e atualmente trabalho com programas de bordados, fiz o meu ensino médio no senai, e lá conheci um pouco sobre a programação, pois eu lá eu não tinha nenhum curso específico, mas bom, ao longo desse 3 anos que passei estudando por lá comecei a gostar e me interessar pela área da programação, onde cada vez mais o nosso mundo e futuro está encaminhado para essa área e penso que agora tanto como futuramente a profissão que pretendo de Engenheiro de Software será de grande importância. E por isso fui atrás de uma boa faculdade e assim encontrei a FIAP onde acho que vou conseguir me dar muito bem.]",
-                "github": "#",
+                "descricao": "Eu me chamo João, e atualmente trabalho com programas de bordados, fiz o meu ensino médio no senai, e lá conheci um pouco sobre a programação, pois eu lá eu não tinha nenhum curso específico, mas bom, ao longo desse 3 anos que passei estudando por lá comecei a gostar e me interessar pela área da programação, onde cada vez mais o nosso mundo e futuro está encaminhado para essa área e penso que agora tanto como futuramente a profissão que pretendo de Engenheiro de Software será de grande importância. E por isso fui atrás de uma boa faculdade e assim encontrei a FIAP onde acho que vou conseguir me dar muito bem.",
+                "github": "https://github.com/chav3rinh0",
                 "linkedin": "#"
             },
             {
                 "nome": "Bernardo Santos Ferretti Barbosa",
                 "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio unde architecto libero, illum officiis voluptatem magnam voluptas exercitationem cum non, ex maxime natus temporibus saepe magni provident illo, optio recusandae. Possimus praesentium veniam laboriosam minus, non tempore perferendis ipsa asperiores, sequi aspernatur, officia delectus. Aspernatur id magni, iste minima nesciunt ut quod mollitia blanditiis tempora dignissimos consectetur, libero similique doloribus? Qui, laborum quis voluptates, similique a debitis ea obcaecati molestiae ut at cupiditate earum maiores consequuntur hic illum nulla vero nobis iusto dolorum inventore autem. Eos inventore cupiditate corporis quaerat.",
-                "github": "#",
+                "github": "https://github.com/Ferr3tt1",
                 "linkedin": "#"
+            }
+        ],
+        "secaoIntegrantesAntigosTitulo": "Integrantes antigos:",
+        "integrantesAntigos": [
+
+            {
+                "nome": "Isabela Alaminos Encinas",
+                "descricao": "Meu nome é Isabela, tenho vinte anos e sou de Curitiba. Sou apaixonada por Gamedev e Front-end e amo trabalhar com Design. Amo a ideia de usar tecnologia para ajudar no cotidiano das pessoas e na resolução de problemas presentes na sociedade. Sou uma pessoa muito versátil e adoro trabalhar em diferentes temas e áreas ao mesmo tempo. Estou muito feliz em fazer parte da equipe de desenvolvimento do projeto Guarucum!!",
+                "github": "https://github.com/alaminosisabela",
+                "linkedin": "https://www.linkedin.com/in/isabela-alaminos-encinas-108b20220"
             },
             {
                 "nome": "Thays da Silva Ferreira",
@@ -149,5 +165,26 @@
                 "linkedin": "#"
             }
         ]
+    },
+    "pageSitePFNMs": {
+        "pageTitulo": "Sobre os PFNMs",
+        "secao1Titulo": "O que são Produtos Florestais Não Madeireiros?",
+        "secao1Paragrafo1": "Os Produtos Florestais Não Madeireiros, conhecidos como PFNMs, são todos os recursos de origem vegetal ou animal extraídos das florestas sem a necessidade de derrubada de árvores. Eles incluem frutos, sementes, óleos, resinas, fibras, mel, castanhas e outros elementos que podem ser utilizados na alimentação, na medicina, na cosmética e em diversos setores produtivos.",
+        "secao1Paragrafo2": "Diferentemente da exploração madeireira, os PFNMs são obtidos por meio de práticas sustentáveis que mantêm a floresta em pé, contribuindo para a preservação ambiental e a manutenção da biodiversidade.",
+        "secao2Titulo": "Importância para as comunidades tradicionais",
+        "secao2Paragrafo1": "Para muitas comunidades indígenas, quilombolas e ribeirinhas, os PFNMs são uma das principais fontes de renda e um elo direto com sua cultura e identidade. A coleta e o beneficiamento desses produtos fazem parte de um modo de vida que respeita os ciclos naturais e valoriza o conhecimento tradicional.",
+        "secao2Paragrafo2": "Essas atividades fortalecem a autonomia econômica, promovem o uso responsável dos recursos naturais e ajudam a proteger o território contra atividades predatórias, como o desmatamento e a mineração ilegal.",
+        "secao3Titulo": "Exemplos de PFNMs",
+        "secao3Lista": [
+            "Castanha-do-pará: alimento rico em nutrientes e amplamente exportado;",
+            "Açaí: fruto energético, base da alimentação de muitas populações amazônicas;",
+            "Babaçu: usado na produção de óleos, sabões e cosméticos naturais;",
+            "Pequi: símbolo do cerrado, utilizado na culinária e na medicina popular;",
+            "Copaíba: óleo com propriedades medicinais e cosméticas;",
+            "Jatobá: fruto e madeira usados na alimentação e na fitoterapia."
+        ],
+        "secao4Titulo": "Sustentabilidade e futuro",
+        "secao4Paragrafo1": "O manejo sustentável dos PFNMs representa uma alternativa concreta à exploração predatória da floresta. Ele incentiva práticas de conservação, valoriza o saber tradicional e oferece oportunidades de desenvolvimento econômico aliado ao cuidado ambiental.",
+        "secao4Paragrafo2": "Ao unir tecnologia e conhecimento ancestral, iniciativas como o Guarucum buscam apoiar essas comunidades para que possam gerenciar, rastrear e valorizar seus produtos de forma justa e eficiente — preservando a floresta e fortalecendo suas raízes culturais."
     }
 }
