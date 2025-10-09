@@ -8,6 +8,7 @@ import PrivateRoutes from "./PrivatesRoutes";
 import PublicRoutes from "./PublicRoutes";
 import Error404 from "@/shared/Pages/error404";
 import Contato from "@/site/pages/Contato/Contato";
+import SobrePFNMs from "@/site/pages/SobrePFNMs/SobrePFNMs";
 
 const PrivateRoute = () => {
   const isAuthenticated = !!localStorage.getItem('token');
@@ -21,6 +22,7 @@ function AppRoutes() {
         
         <Route path="/" element={<Home />} />
         <Route path="/contato" element={<Contato />}/>
+        <Route path="/sobre-pfnms" element={<SobrePFNMs />}/>
 
         <Route element={<PublicRoutes />}>
           <Route path="/login" element={<Login />} />

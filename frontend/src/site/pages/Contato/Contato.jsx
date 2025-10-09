@@ -21,8 +21,8 @@ export default function Contato() {
 
     return (
         <SiteLayout>
-            <section className="container">
-                <Text variant="h1" className="text-center uppercase mb-4" style={{ marginTop: "100px" }}>
+            <section className="container" style={{ marginTop: "100px" }}>
+                <Text variant="h1" className="text-center uppercase mb-4">
                     {texto.pageTitulo}
                 </Text>
                 <Text variant="h2" className="text-center uppercase mb-3">
