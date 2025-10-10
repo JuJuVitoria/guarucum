@@ -3,15 +3,17 @@ import logo from "../../../assets/icon/logoGuarucumOlho.svg"
 import { navigation } from "../../../data/navigation";
 import "./Sidebar.scss"
 import { IoPersonCircleOutline } from "react-icons/io5";
-import { LuLayoutDashboard, LuShoppingCart, LuBox } from "react-icons/lu";
+import { LuLayoutDashboard, LuShoppingCart, LuBox, LuCircleDollarSign } from "react-icons/lu";
+import { gerarSlug } from "@/shared/utils/gerarSlug";
 
 export default function Sidebar() {
     const itens = navigation;
-
+    
     const iconsMap = {
         'Dashboard': <LuLayoutDashboard size={30} />,
-        'Vendas': <LuShoppingCart size={30} />,
+        'Shopping': <LuShoppingCart size={30} />,
         'Estoque': <LuBox size={30} />,
+        'Minhas Vendas': <LuCircleDollarSign size={30} />,
     };
 
     return (
@@ -24,7 +26,7 @@ export default function Sidebar() {
                 <ul className="nav nav-pills nav-flush flex-md-column flex-row mb-auto text-center gap-2">
                     {itens.map((item, index) => (
                         <li key={index} className="nav-item">
-                            <Link to={item !== "Dashboard" ? `/app/${item}` : "/app/dashboard"} className="nav-link">
+                            <Link to={item !== "Dashboard" ? `/app/${gerarSlug(item)}` : "/app/dashboard"} className="nav-link">
                                 {iconsMap[item] || null}
                             </Link>
                         </li>

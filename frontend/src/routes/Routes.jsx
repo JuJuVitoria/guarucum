@@ -7,6 +7,7 @@ import Contato from "@/site/pages/Contato/Contato";
 import SobrePFNMs from "@/site/pages/SobrePFNMs/SobrePFNMs";
 import PrivateRoute from "./PrivatesRoute";
 import Auth from "@/app/pages/Auth";
+import MinhasVendas from "@/app/pages/MinhasVendas/MinhasVendas";
 
 export default function AppRoutes() {
   return (
@@ -21,6 +22,7 @@ export default function AppRoutes() {
         <Route element={<PrivateRoute />}>
           <Route path="/app/dashboard" element={<Dashboard />} />
           <Route path="/app/estoque" element={<Estoque />} />
+          <Route path="/app/minhas-vendas" element={<MinhasVendas />} />
         </Route>
 
         <Route path="*" element={<Error404 />} />

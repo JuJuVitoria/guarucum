@@ -1,5 +1,6 @@
 export const navigation = [
     'Dashboard',
-    'Vendas',
+    'Shopping',
     'Estoque',
+    'Minhas Vendas'
 ]
