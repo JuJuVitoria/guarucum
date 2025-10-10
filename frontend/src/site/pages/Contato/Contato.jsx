@@ -4,6 +4,7 @@ import { Text } from "@/shared/components/Text/Text";
 import textosData from "@/site/locales/pt.json";
 import { FaGithub } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io";
+import "./Contato.scss"
 
 export default function Contato() {
     const texto = textosData.pageSiteContato;
@@ -305,10 +306,14 @@ export default function Contato() {
                         <p className="mb-2" key={i}>{p}</p>
                     ))}
                 </div>
-                <div className="row gy-4">
-                    <Text variant="h3" className="text-center mt-5 mb-3">{texto.secaoIntegrantesSubtitulo2}</Text>
+
+                <Text variant="h3" className="text-center mt-5 mb-3">{texto.secaoIntegrantesSubtitulo2}</Text>
+                <div className="integrantes-container">
                     {texto.integrantesAtuais.map((integrante, idx) => (
-                        <div className="col-md-6 col-lg-4" key={idx}>
+                        <div
+                            className="integrante-card"
+                            key={idx}
+                        >
                             <div className="card shadow-sm h-100">
                                 {integrante.nome && (
                                     <>
@@ -353,10 +358,11 @@ export default function Contato() {
                         </div>
                     ))}
                 </div>
-                <div className="row gy-4">
-                    <Text variant="h3" className="text-center mt-5 mb-3">{texto.secaoIntegrantesAntigosTitulo}</Text>
+
+                <Text variant="h3" className="text-center mt-5 mb-3">{texto.secaoIntegrantesAntigosTitulo}</Text>
+                <div className="integrantes-container">
                     {texto.integrantesAntigos.map((integrante, idx) => (
-                        <div className="col-md-6 col-lg-4" key={idx}>
+                        <div className="integrante-card" key={idx}>
                             <div className="card shadow-sm h-100 p-2">
                                 {integrante.nome && (
                                     <>
@@ -379,8 +385,6 @@ export default function Contato() {
                                                 />
                                             )}
                                         </div>
-
-
                                         <div className="card-body d-flex flex-column">
                                             <h4 className="card-title">{integrante.nome}</h4>
                                             <p className="card-text flex-grow-1">{integrante.descricao}</p>

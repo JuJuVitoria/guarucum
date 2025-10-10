@@ -65,16 +65,16 @@ export default function SiteHeader() {
 
             <div className="botoes-finais">
               <div className="area-autenticacao">
-                <Link to="/auth" className='botao-entrar'>Entrar</Link>
-                <Link to="/auth">Cadastrar</Link>
+                <Link to="/auth" className='btn-auth'>Entrar</Link>
+                <Link to="/auth" className='btn-auth'>Cadastrar</Link>
               </div>
 
               <div className="controle-tema">
                 <button onClick={alternarTema} aria-label="Alternar tema" className={modoEscuro ? 'ativo' : ''}>
                   {modoEscuro ? (
-                    <MdSunny size={24} color="#e3e3e3" />
+                    <MdSunny size={24} />
                   ) : (
-                    <MdDarkMode size={24} color="#e3e3e3" />
+                    <MdDarkMode size={24} />
                   )}
                 </button>
               </div>

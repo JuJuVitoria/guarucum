@@ -25,8 +25,6 @@ export default function SimpleLayout() {
             <img src={logo} alt="Logo Olho Guarucum" className="logo-cabecalho" />
 
             <div className="cabecalho-direita">
-
-
                 <div className="controle-tema">
                     <button onClick={alternarTema} aria-label="Alternar tema" className={modoEscuro ? 'ativo' : ''}>
                         {modoEscuro ? (
