@@ -55,6 +55,7 @@ export default function SobrePFNMs() {
             </section>
 
             <section className="container my-5" style={{ position: 'relative', width: '100%' }}>
+                <Text variant="h2" className="mb-3">{texto.secao4Titulo}</Text>
 
                 <div style={{ height: "70vh", width: "100%", position: 'relative', overflow: "hidden", borderRadius: 12 }}>
                     <Mapa
@@ -96,14 +97,11 @@ export default function SobrePFNMs() {
                 <Text variant="">Dados: <a href="https://www.ibge.gov.br/geociencias/cartas-e-mapas/informacoes-ambientais/15842-biomas.html?=&t=downloads" target="_blank" rel="noopener noreferrer">IBGE - Biomas brasileiros</a></Text>
             </section>
 
-
-
-
             {/* Seção 4 */}
             <section className="container mb-5 bg-success-subtle p-4 rounded-4 shadow-sm">
-                <Text variant="h3">{texto.secao4Titulo}</Text>
-                <Text>{texto.secao4Paragrafo1}</Text>
-                <Text>{texto.secao4Paragrafo2}</Text>
+                <Text variant="h3">{texto.secao5Titulo}</Text>
+                <Text>{texto.secao5Paragrafo1}</Text>
+                <Text>{texto.secao5Paragrafo2}</Text>
             </section>
         </SiteLayout>
     );

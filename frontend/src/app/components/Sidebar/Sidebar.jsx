@@ -24,7 +24,7 @@ export default function Sidebar() {
                 <ul className="nav nav-pills nav-flush flex-md-column flex-row mb-auto text-center gap-2">
                     {itens.map((item, index) => (
                         <li key={index} className="nav-item">
-                            <Link to={item !== "Dashboard" ? `/${item}` : "/"} className="nav-link">
+                            <Link to={item !== "Dashboard" ? `/app/${item}` : "/app/dashboard"} className="nav-link">
                                 {iconsMap[item] || null}
                             </Link>
                         </li>
@@ -46,7 +46,7 @@ export default function Sidebar() {
                         <li><Link className="dropdown-item" to="/settings">Configurações</Link></li>
                         <li><Link className="dropdown-item" to="/profile">Perfil</Link></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><Link className="dropdown-item" to="/logout">Sair</Link></li>
+                        <li><Link className="dropdown-item" to="/">Sair</Link></li>
                     </ul>
                 </div>
             </div>

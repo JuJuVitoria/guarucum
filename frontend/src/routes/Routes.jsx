@@ -1,34 +1,24 @@
-import { BrowserRouter, Route, Routes, Navigate, Outlet } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "@/app/pages/Dashboard";
 import Estoque from "@/app/pages/Estoque";
-import Login from "@/app/pages/Auth";
 import Home from "@/site/pages/Home";
-
-import PrivateRoutes from "./PrivatesRoutes";
-import PublicRoutes from "./PublicRoutes";
 import Error404 from "@/shared/Pages/error404";
 import Contato from "@/site/pages/Contato/Contato";
 import SobrePFNMs from "@/site/pages/SobrePFNMs/SobrePFNMs";
+import PrivateRoute from "./PrivatesRoute";
+import Auth from "@/app/pages/Auth";
 
-const PrivateRoute = () => {
-  const isAuthenticated = !!localStorage.getItem('token');
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
-};
-
-function AppRoutes() {
+export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        
         <Route path="/" element={<Home />} />
-        <Route path="/contato" element={<Contato />}/>
-        <Route path="/sobre-pfnms" element={<SobrePFNMs />}/>
+        <Route path="/contato" element={<Contato />} />
+        <Route path="/sobre-pfnms" element={<SobrePFNMs />} />
+        <Route path="/auth" element={<Auth />} />
 
-        <Route element={<PublicRoutes />}>
-          <Route path="/login" element={<Login />} />
-        </Route>
-
-        <Route element={<PrivateRoutes />}>
+        {/* Rotas privadas protegidas */}
+        <Route element={<PrivateRoute />}>
           <Route path="/app/dashboard" element={<Dashboard />} />
           <Route path="/app/estoque" element={<Estoque />} />
         </Route>
@@ -38,5 +28,3 @@ function AppRoutes() {
     </BrowserRouter>
   );
 }
-
-export default AppRoutes;

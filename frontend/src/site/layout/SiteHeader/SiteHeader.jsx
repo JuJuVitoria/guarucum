@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from "../../../assets/icon/logoGuarucumOlho.svg"
-import { FiSun, FiMoon } from 'react-icons/fi';
+import { MdDarkMode, MdSunny } from "react-icons/md";
 import './SiteHeader.scss';
 import { Link } from 'react-router-dom';
 
@@ -65,16 +65,16 @@ export default function SiteHeader() {
 
             <div className="botoes-finais">
               <div className="area-autenticacao">
-                <button className="botao-entrar">Entrar</button>
-                <button className="botao-cadastrar">Cadastrar</button>
+                <Link to="/auth" className='botao-entrar'>Entrar</Link>
+                <Link to="/auth">Cadastrar</Link>
               </div>
 
               <div className="controle-tema">
                 <button onClick={alternarTema} aria-label="Alternar tema" className={modoEscuro ? 'ativo' : ''}>
                   {modoEscuro ? (
-                    <FiSun size={24} color="#e3e3e3" />
+                    <MdSunny size={24} color="#e3e3e3" />
                   ) : (
-                    <FiMoon size={24} color="#e3e3e3" />
+                    <MdDarkMode size={24} color="#e3e3e3" />
                   )}
                 </button>
               </div>
