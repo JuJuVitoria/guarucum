@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "product": "Castanha-do-Pará",
+    "productImage": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&h=400&fit=crop",
+    "quantity": 50,
+    "unitPrice": 12.5,
+    "totalPrice": 625,
+    "date": "2025-10-05",
+    "buyer": "Cooperativa Regional",
+    "status": "finalizada",
+    "description": "Castanhas de primeira qualidade, colhidas na safra 2025"
+  },
+  {
+    "id": "2",
+    "product": "Açaí",
+    "productImage": "https://images.unsplash.com/photo-1623428454614-abaf00244e52?w=400&h=400&fit=crop",
+    "quantity": 100,
+    "unitPrice": 8,
+    "totalPrice": 800,
+    "date": "2025-10-08",
+    "buyer": "Mercado Local",
+    "status": "finalizada",
+    "description": "Açaí orgânico, colhido e processado artesanalmente"
+  },
+  {
+    "id": "3",
+    "product": "Babaçu",
+    "productImage": "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=400&h=400&fit=crop",
+    "quantity": 30,
+    "unitPrice": 15,
+    "totalPrice": 450,
+    "date": "2025-10-09",
+    "buyer": "Indústria Sustentável",
+    "status": "pendente",
+    "description": "Amêndoas de babaçu para produção de óleo"
+  },
+  {
+    "id": "4",
+    "product": "Cupuaçu",
+    "productImage": "https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400&h=400&fit=crop",
+    "quantity": 25,
+    "unitPrice": 20,
+    "totalPrice": 500,
+    "date": "2025-10-07",
+    "buyer": "Fábrica de Chocolates",
+    "status": "finalizada",
+    "description": "Polpa de cupuaçu congelada"
+  },
+  {
+    "id": "5",
+    "product": "Castanha-do-Pará",
+    "productImage": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&h=400&fit=crop",
+    "quantity": 75,
+    "unitPrice": 12.5,
+    "totalPrice": 937.5,
+    "date": "2025-10-01",
+    "buyer": "Exportadora Nacional",
+    "status": "finalizada",
+    "description": "Castanhas certificadas orgânicas"
+  },
+  {
+    "id": "6",
+    "product": "Buriti",
+    "productImage": "https://images.unsplash.com/photo-1587132117816-5bb515921fb4?w=400&h=400&fit=crop",
+    "quantity": 20,
+    "unitPrice": 18,
+    "totalPrice": 360,
+    "date": "2025-09-28",
+    "buyer": "Cooperativa Regional",
+    "status": "cancelada",
+    "description": "Frutos de buriti"
+  },
+  {
+    "id": "7",
+    "product": "Açaí",
+    "productImage": "https://images.unsplash.com/photo-1623428454614-abaf00244e52?w=400&h=400&fit=crop",
+    "quantity": 80,
+    "unitPrice": 8,
+    "totalPrice": 640,
+    "date": "2025-10-03",
+    "buyer": "Restaurante Amazônico",
+    "status": "finalizada",
+    "description": "Açaí premium"
+  },
+  {
+    "id": "8",
+    "product": "Copaíba (Óleo)",
+    "productImage": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
+    "quantity": 10,
+    "unitPrice": 45,
+    "totalPrice": 450,
+    "date": "2025-10-10",
+    "buyer": "Farmácia Natural",
+    "status": "pendente",
+    "description": "Óleo de copaíba medicinal extraído sustentavelmente"
+  }
+]

@@ -1,0 +1,29 @@
+@use '../../../shared/style/__variables' as vars;
+
+.card {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.075);
+}
+
+.nav-link {
+  color: vars.$vermelho-es !important;
+
+  &.active {
+    background-color: vars.$vermelho-md !important;
+    color: white !important;
+  }
+}
+
+.btn-success {
+  background-color: vars.$vermelho-md !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(54, 49, 49, 0.6) !important;
+
+  &:hover {
+    background-color: vars.$vermelho-es !important;
+    box-shadow: 0 6px 20px rgba(54, 49, 49, 0.8) !important;
+  }
+}
+
+.btn-link {
+  color: vars.$vermelho-md !important;
+}

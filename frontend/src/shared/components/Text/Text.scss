@@ -1,0 +1,133 @@
+/* _typography.scss */
+
+/* 1) Import de fontes (Ubuntu + Roboto) */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* 2) Tokens base */
+:root {
+  /* Font families */
+  --font-family-heading: "Ubuntu", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family-body: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* Font weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* Line heights */
+  --lh-body: 1.6;
+  --lh-heading: 1.2;
+
+  /* Escala base */
+  --ratio: 1.333; /* perfect fourth */
+  --fs-base: 1rem; /* 16px base */
+
+  /* Breakpoints para tipografia fluida */
+  --bp-min: 320px;
+  --bp-max: 1200px;
+}
+
+/* 3) Funções auxiliares SASS */
+@function pow($base, $exp) {
+  $result: 1;
+  @for $i from 1 through abs($exp) {
+    $result: $result * $base;
+  }
+  @if $exp < 0 { @return 1 / $result; }
+  @return $result;
+}
+
+/* Gera escala fixa (para fallback e utilidades) */
+@for $i from -2 through 6 {
+  $name: 100 + ($i * 100);
+  $value: calc(var(--fs-base) * pow(var(--ratio), #{$i}));
+  :root { --fs-#{$name}: #{$value}; }
+}
+
+/* 4) Tamanhos por variante (fallback fixo) */
+:root {
+  --fs-h1: var(--fs-600);
+  --fs-h2: var(--fs-500);
+  --fs-h3: var(--fs-400);
+  --fs-h4: var(--fs-300);
+  --fs-h5: var(--fs-200);
+  --fs-h6: var(--fs-100);
+  --fs-body: var(--fs-100);
+  --fs-caption: calc(var(--fs-100) * 0.875);
+}
+
+/* 5) Tipografia fluida com clamp: cresce suavemente entre bp-min e bp-max */
+@media (min-width: 0) {
+  :root {
+    /* Ajuste o multiplicador para cada heading conforme desejar */
+    --fs-h1: clamp(1.875rem, 1.2rem + 2.5vw, 3rem);
+    --fs-h2: clamp(1.5rem, 1.05rem + 1.7vw, 2.25rem);
+    --fs-h3: clamp(1.25rem, 0.95rem + 1.2vw, 1.75rem);
+    --fs-h4: clamp(1.125rem, 0.9rem + 0.8vw, 1.5rem);
+    --fs-h5: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+    --fs-h6: clamp(0.95rem, 0.9rem + 0.2vw, 1.125rem);
+    --fs-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    --fs-caption: clamp(0.875rem, 0.84rem + 0.15vw, 0.95rem);
+  }
+}
+
+/* 6) Classe base e variantes alinhadas ao seu design */
+.typo {
+  color: var(--bs-body-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.typo--h1,
+.typo--h2,
+.typo--h3,
+.typo--h4,
+.typo--h5,
+.typo--h6 {
+  font-family: var(--font-family-heading);
+  line-height: var(--lh-heading);
+  margin: 0 0 0.5rem 0;
+  text-wrap: balance; /* melhora títulos longos em múltiplas linhas */
+}
+
+.typo--h1 { font-size: var(--fs-h1); font-weight: var(--fw-bold); text-transform: uppercase; }
+.typo--h2 { font-size: var(--fs-h2); font-weight: var(--fw-bold); text-transform: uppercase; }
+.typo--h3 { font-size: var(--fs-h3); font-weight: var(--fw-medium); text-transform: capitalize; }
+.typo--h4 { font-size: var(--fs-h4); font-weight: var(--fw-medium); }
+.typo--h5 { font-size: var(--fs-h5); font-weight: var(--fw-medium); letter-spacing: 0.01em; }
+.typo--h6 { font-size: var(--fs-h6); font-weight: var(--fw-medium); letter-spacing: 0.02em; }
+
+.typo--body {
+  font-family: var(--font-family-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  margin: 0.3rem 0;
+}
+
+.typo--caption {
+  font-family: var(--font-family-body);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.02em;
+}
+
+/* 7) Aliases para suas classes utilitárias atuais (mantém compatibilidade) */
+.titulo-principal   { @extend .typo, .typo--h1; text-align: center; margin: 2rem 0 .8rem; }
+.subtitulo-primario { @extend .typo, .typo--h2; text-align: center; margin: 1rem 0 .8rem; }
+.subtitulo-secundario { @extend .typo, .typo--h3; text-align: center; margin: 1rem 0 .5rem; }
+.titulo-complementar { @extend .typo, .typo--h4; text-align: center; margin: .8rem 0 .5rem; }
+.paragrafo { @extend .typo, .typo--body; }
+
+/* 8) Helpers opcionais */
+.text-center { text-align: center; }
+.uppercase { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+
+/* 9) Reset leve para body */
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}

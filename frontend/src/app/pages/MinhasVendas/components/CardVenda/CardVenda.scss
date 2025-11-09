@@ -1,0 +1,45 @@
+@use "../../../../../shared/style/__variables" as vars;
+
+.card-venda {
+    border: 2px solid vars.$vermelho-es !important; 
+    background: vars.$branco !important;
+    color: vars.$cinza-es !important;
+    backdrop-filter: blur(6px);
+
+    .botao {
+        background-color: vars.$vermelho-es;
+        color: vars.$branco;
+        border: none;
+        border-radius: 8px;
+        padding: 0.3rem 0.7rem;
+
+        &:hover {
+            background-color: vars.$vermelho-md;
+        }
+    }
+
+}
+
+.bg-verde-es {
+    background-color: vars.$verde-es !important;
+}
+
+.text-verde-es {
+    color: vars.$verde-es !important;
+}
+
+.border-verde-es {
+    border-color: vars.$verde-es !important;
+}
+
+.bg-vermelho-es {
+    background-color: vars.$vermelho-es !important;
+}
+
+.text-vermelho-es {
+    color: vars.$vermelho-es !important;
+}
+
+.border-vermelho-es {
+    border-color: vars.$vermelho-es !important;
+}
