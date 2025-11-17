@@ -1,5 +1,5 @@
+import { MainLayout } from "@/app/layout/MainLayout/MainLayout";
 import "./Dashboard.scss";
-import MainLayout from "@/app/layout/MainLayout";
 import Table from "@/app/components/Tabela";
 
 export default function Dashboard() {

@@ -1,0 +1,10 @@
+@use "./variables";
+@use "./themes";
+
+body {
+    color: var(--text-color);
+}
+
+main {
+    background-color: var(--secundary-bg-color);
+}

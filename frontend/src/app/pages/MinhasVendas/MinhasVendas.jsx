@@ -1,4 +1,3 @@
-import MainLayout from "@/app/layout/MainLayout";
 import { CardVenda } from "./components/CardVenda/CardVenda";
 import dataVendas from "@/data/vendas.json";
 import { CardFiltro } from "./components/CardFiltro/CardFiltro";
@@ -6,6 +5,7 @@ import { useState } from "react";
 import { Text } from "@/shared/components/Text/Text";
 import { CardStatus } from "./components/CardStatus/CardStatus";
 import { VerDetalhes } from "./components/VerDetalhes/VerDetalhes";
+import { MainLayout } from "@/app/layout/MainLayout/MainLayout";
 
 export default function MinhasVendas() {
   const vendas = dataVendas;

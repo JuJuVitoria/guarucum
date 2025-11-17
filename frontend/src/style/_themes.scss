@@ -1,0 +1,22 @@
+@use "./variables" as *;
+
+// Tema claro
+:root,
+[data-theme="light"] {
+    --primary-bg-color: #{$cinza-es};
+    --secundary-bg-color: #{$branco};
+    --bg-header: #fafafa;
+    --bg-sidebar: #1a1a1a;
+    --text-color: #{$cinza-es};
+    --btn-color: #{$cinza-cl};
+}
+
+// Tema escuro
+[data-theme="dark"] {
+    --primary-bg-color: #{$cinza-es};
+    --secundary-bg-color: #{$cinza-md};
+    --text-color: #{$branco};
+    --bg-header: #222222;
+    --bg-sidebar: #1a1a1a;
+    --btn-color: #383838;
+}
