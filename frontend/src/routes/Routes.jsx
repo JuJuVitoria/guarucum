@@ -13,6 +13,7 @@ import { Auth } from "@/pages/app/Auth/Auth";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./PrivatesRoute";
+import { Informativo } from "@/pages/app/Informativo/Informativo";
 
 export default function AppRoutes() {
   return (
@@ -26,6 +27,7 @@ export default function AppRoutes() {
         {/* Rotas privadas protegidas */}
         <Route element={<PrivateRoute />}>
           <Route path="/app/dashboard" element={<Dashboard />} />
+          <Route path="/app/informativo" element={<Informativo />} />
           <Route path="/app/estoque" element={<Estoque />} />
           <Route path="/app/minhas-vendas" element={<MinhasVendas />} />
         </Route>

@@ -3,6 +3,7 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { Nav } from "react-bootstrap";
 import { RiLayoutGridFill } from "react-icons/ri";
 import { LuBox, LuReceipt } from "react-icons/lu";
+import { FaRegNewspaper } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import logo from "@/assets/icon/logoGuarucumOlho.svg"
 
@@ -10,6 +11,7 @@ const items = [
     { key: "dashboard", label: "Dashboard", icon: RiLayoutGridFill, path: "/app/dashboard" },
     { key: "estoque", label: "Estoque", icon: LuBox, path: "/app/estoque" },
     { key: "minhas-vendas", label: "Minhas Vendas", icon: LuReceipt, path: "/app/minhas-vendas" },
+    { key: "informativo", label: "Informativo", icon: FaRegNewspaper, path: "/app/informativo" },
 ];
 
 export const Sidebar = () => {
