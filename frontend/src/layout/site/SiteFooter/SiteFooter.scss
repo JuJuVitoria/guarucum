@@ -1,0 +1,24 @@
+.footer-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.footer-icon {
+  color: var(--text-color);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.footer-logo-olho {
+  filter: var(--logo-filter); // Se você tiver tema escuro Modo invertido
+}

@@ -1,0 +1,25 @@
+.site-header-wrapper {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 1050;
+}
+
+.site-header {
+  border-radius: 12px;
+  height: 60px;
+}
+
+.nav-link-custom {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  transition: 0.25s;
+  padding: 0.5rem 0.8rem;
+}
+
+.offcanvas-menu {
+  padding: 1rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}

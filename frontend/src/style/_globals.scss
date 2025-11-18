@@ -2,6 +2,7 @@
 @use "./themes";
 
 body {
+    background-color: var(--secundary-bg-color);
     color: var(--text-color);
 }
 

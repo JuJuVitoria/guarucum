@@ -1,13 +1,18 @@
+//app
+import { Dashboard } from "@/pages/app/Dashboard/Dashboard";
+import { Estoque } from "@/pages/app/Estoque/Estoque";
+import { MinhasVendas } from "@/pages/app/MinhasVendas/MinhasVendas";
+//site
+import { Home } from "@/pages/site/Home/Home";
+import { SobrePFNMs } from "@/pages/site/SobrePFNMs/SobrePFNMs";
+import { Contato } from "@/pages/site/Contato/Contato";
+//error
+import { Error404 } from "@/pages/error/error404";
+//autenticacao
+import { Auth } from "@/pages/app/Auth/Auth";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "@/app/pages/Dashboard";
-import Estoque from "@/app/pages/Estoque";
-import Home from "@/site/pages/Home";
-import Error404 from "@/shared/Pages/error404";
-import Contato from "@/site/pages/Contato/Contato";
-import SobrePFNMs from "@/site/pages/SobrePFNMs/SobrePFNMs";
 import PrivateRoute from "./PrivatesRoute";
-import Auth from "@/app/pages/Auth";
-import MinhasVendas from "@/app/pages/MinhasVendas/MinhasVendas";
 
 export default function AppRoutes() {
   return (

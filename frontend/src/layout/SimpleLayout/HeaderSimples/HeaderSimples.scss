@@ -1,0 +1,29 @@
+.site-header-wrapper {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 1050;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 60px;
+    border-radius: 12px;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    background-color: var(--bg-header);
+    color: var(--text-color);
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+}
