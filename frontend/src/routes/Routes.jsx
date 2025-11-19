@@ -2,6 +2,7 @@
 import { Dashboard } from "@/pages/app/Dashboard/Dashboard";
 import { Estoque } from "@/pages/app/Estoque/Estoque";
 import { MinhasVendas } from "@/pages/app/MinhasVendas/MinhasVendas";
+import { Territorio } from "../pages/app/Territorio/Territorio";
 //site
 import { Home } from "@/pages/site/Home/Home";
 import { SobrePFNMs } from "@/pages/site/SobrePFNMs/SobrePFNMs";
@@ -30,6 +31,7 @@ export default function AppRoutes() {
           <Route path="/app/informativo" element={<Informativo />} />
           <Route path="/app/estoque" element={<Estoque />} />
           <Route path="/app/minhas-vendas" element={<MinhasVendas />} />
+          <Route path="/app/territorio" element={<Territorio />} />
         </Route>
 
         <Route path="*" element={<Error404 />} />

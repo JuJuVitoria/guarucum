@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TabelaEstoque from "@/components/app/TabelaEstoque";
 import FormEstoque from "@/components/app/FormEstoque/FormEstoque";
-import { produtos as dadosMock } from "../../../data/estoque";
+import { produtos as dadosMock } from "@/data/business/estoque.js";
 import { MainLayout } from "@/layout/app/MainLayout/MainLayout";
 
 export const Estoque = () => {

@@ -1,5 +1,5 @@
 import { CardVenda } from "./components/CardVenda/CardVenda";
-import dataVendas from "@/data/vendas.json";
+import dataVendas from "@/data/business/vendas.json";
 import { CardFiltro } from "./components/CardFiltro/CardFiltro";
 import { useState } from "react";
 import { Text } from "@/components/shared/Text/Text";

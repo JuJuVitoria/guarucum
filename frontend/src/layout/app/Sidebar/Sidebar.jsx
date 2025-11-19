@@ -4,6 +4,7 @@ import { Nav } from "react-bootstrap";
 import { RiLayoutGridFill } from "react-icons/ri";
 import { LuBox, LuReceipt } from "react-icons/lu";
 import { FaRegNewspaper } from "react-icons/fa6";
+import { BiMapAlt } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import logo from "@/assets/icon/logoGuarucumOlho.svg"
 
@@ -12,6 +13,7 @@ const items = [
     { key: "estoque", label: "Estoque", icon: LuBox, path: "/app/estoque" },
     { key: "minhas-vendas", label: "Minhas Vendas", icon: LuReceipt, path: "/app/minhas-vendas" },
     { key: "informativo", label: "Informativo", icon: FaRegNewspaper, path: "/app/informativo" },
+    { key: "Territorio", label: "Territorio", icon: BiMapAlt, path: "/app/territorio" },
 ];
 
 export const Sidebar = () => {

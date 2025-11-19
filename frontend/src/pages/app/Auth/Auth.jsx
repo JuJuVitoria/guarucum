@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Auth.scss";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "@/context/UserContext";
-import UserData from "@/data/user.json";
+import UserData from "@/data/user/user.json";
 import { SimpleLayout } from "@/layout/SimpleLayout/SimpleLayout";
 
 export const Auth = () => {

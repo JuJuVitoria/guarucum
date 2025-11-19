@@ -1,5 +1,5 @@
 import textosData from "@/locales/pt.json";
-import biomasGeoJson from "@/data/GeoJson/lmBioma250.json"
+import biomasGeoJson from "@/data/geo/biomas/lmBioma250.json"
 import SiteLayout from "@/layout/site/SiteLayout";
 import { Mapa } from "@/components/shared/Mapa/Mapa";
 import { Text } from "@/components/shared/Text/Text";
