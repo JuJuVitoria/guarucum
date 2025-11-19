@@ -1,4 +1,4 @@
-import { useUser } from "@/context/UserContext";
+import { useUser } from "@/context/userContext";
 import { Error403 } from "@/pages/error/error403";
 import { Outlet } from "react-router-dom";
 
