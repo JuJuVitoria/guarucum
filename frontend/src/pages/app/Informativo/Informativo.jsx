@@ -1,6 +1,6 @@
 import { MainLayout } from "@/layout/app/MainLayout/MainLayout";
 import { Table } from "react-bootstrap";
-import "./informativo.scss";
+import "./Informativo.scss";
 
 export const Informativo = () => {
   const castanhaRows = [
