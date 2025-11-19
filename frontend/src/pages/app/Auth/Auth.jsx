@@ -21,16 +21,15 @@ export const Auth = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // --- Cadastro Simulado ---
+    // Cadastro simulado
     if (isRegistering) {
       setMessage(`Conta criada para ${form.name}. Faça login agora.`);
       setIsRegistering(false);
-
       setForm({ name: "", email: "", password: "" });
       return;
     }
 
-    // --- Login ---
+    // Login
     if (form.email === mockUser.email && form.password === mockUser.password) {
       login({ name: mockUser.name, email: mockUser.email });
       navigate("/app/dashboard");
@@ -39,12 +38,29 @@ export const Auth = () => {
     }
   };
 
+  // Preencher formulário com mock
+  const handleFillMock = () => {
+    setForm({ name: mockUser.name, email: mockUser.email, password: mockUser.password });
+    setMessage("Dados de teste preenchidos.");
+  };
+
+  // Copiar credenciais
+  const handleCopyMock = async () => {
+    try {
+      await navigator.clipboard.writeText(
+        `email: ${mockUser.email}\nsenha: ${mockUser.password}`
+      );
+      setMessage("Credenciais copiadas para a área de transferência.");
+    } catch {
+      setMessage("Não foi possível copiar. Preencha manualmente.");
+    }
+  };
+
   return (
     <SimpleLayout>
       <div className="d-flex vh-100 justify-content-center align-items-center px-3 pt-5">
         <div className="card rounded-4 w-100" style={{ maxWidth: "400px" }}>
           <div className="card-body">
-
             {/* Alternar Tabs */}
             <ul className="nav nav-pills mb-4 justify-content-center">
               <li className="nav-item">
@@ -81,9 +97,42 @@ export const Auth = () => {
               {isRegistering ? "Preencha seus dados para começar" : "Acesse seu painel"}
             </p>
 
+            {/* Mini card com usuário mockado */}
+            {!isRegistering && (
+              <div className="card border-0 shadow-sm rounded-3 mb-4">
+                <div className="card-body py-3">
+                  <div className="d-flex align-items-start justify-content-between">
+                    <div>
+                      <div className="small text-muted">Usuário de teste</div>
+                      <div className="fw-semibold">{mockUser.name}</div>
+                      <div className="small">email: <span className="text-monospace">{mockUser.email}</span></div>
+                      <div className="small">senha: <span className="text-monospace">{mockUser.password}</span></div>
+                    </div>
+                    <div className="d-flex gap-2">
+                      <button
+                        type="button"
+                        className="btn btn-outline-secondary btn-sm"
+                        onClick={handleCopyMock}
+                        title="Copiar credenciais"
+                      >
+                        Copiar
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-outline-primary btn-sm"
+                        onClick={handleFillMock}
+                        title="Preencher formulário"
+                      >
+                        Preencher
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Formulário */}
             <form onSubmit={handleSubmit}>
-              
               {/* Campo Nome (Somente no cadastro) */}
               {isRegistering && (
                 <div className="mb-3">
@@ -153,7 +202,6 @@ export const Auth = () => {
                 {isRegistering ? "Faça Login" : "Cadastre-se"}
               </button>
             </div>
-
           </div>
         </div>
       </div>
