@@ -2,7 +2,7 @@ import { Button, Image, Dropdown } from "react-bootstrap";
 import { RiNotification3Line } from "react-icons/ri";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { useTheme } from "@/context/ThemeContext";
-import { useUser } from "@/context/UserContext";
+import { useUser } from "@/context/userContext";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const TITLE_MAP = {
